@@ -13,13 +13,15 @@
 
 App::before(function($request)
 {
-	//
+    // Save current request by tracker
+    \Tracking\Tracker::instance()->save();
 });
 
 
 App::after(function($request, $response)
 {
-	//
+    // Request is over..
+    \Tracking\Tracker::instance()->done();
 });
 
 /*

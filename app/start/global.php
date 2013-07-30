@@ -1,5 +1,23 @@
 <?php
 
+use Asset\Asset;
+use PathManager\Path;
+use Tracking\Tracker;
+
+// Initialize my packages
+
+// Initialize Asset class
+Asset::init(URL::asset(''), app_path() . '/assets/plugins', app_path() . '/assets/pages');
+
+// Initialize Path class
+Path::init(URL::asset(''), public_path());
+
+// Set mechanism for tracker class
+Tracker::instance()->setMechanism(function()
+{
+   return Route::currentRouteName();
+});
+
 /*
 |--------------------------------------------------------------------------
 | Register The Laravel Class Loader
@@ -10,7 +28,6 @@
 | your classes in the "global" namespace without Composer updating.
 |
 */
-
 ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
