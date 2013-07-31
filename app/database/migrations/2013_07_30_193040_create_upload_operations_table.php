@@ -12,12 +12,18 @@ class CreateUploadOperationsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('upload_operations', function(Blueprint $table)
+		Schema::create('operations', function(Blueprint $table)
 		{
+            $table->engine = 'InnoDB';
 			$table->increments('id');
+
+            $table->string('type');
 
             $table->string('method');
             $table->string('args');
+
+            $table->integer('group_config_id')->unsigned();
+            $table->foreign('group_config_id')->references('id')->on('group_configs')->onDelete('CASCADE');
 
 			$table->timestamps();
 		});
@@ -30,7 +36,7 @@ class CreateUploadOperationsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('upload_operations');
+		Schema::drop('operations');
 	}
 
 }

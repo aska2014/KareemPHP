@@ -15,6 +15,10 @@ class CreateImageGroupsTable extends Migration {
 		Schema::create('image_groups', function(Blueprint $table)
 		{
 			$table->increments('id');
+
+            // Example: User.Profile
+            $table->string('name');
+
 			$table->timestamps();
 		});
 	}
