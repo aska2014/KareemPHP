@@ -38,7 +38,6 @@ class Operation extends \BaseModel {
     protected $rules = array(
         'type'   => 'required',
         'method' => 'required',
-        'group_config_id' => 'required|exists:group_configs,id'
     );
 
     /**
@@ -48,7 +47,6 @@ class Operation extends \BaseModel {
         'type'   => '\Intervention\Image\Image',
         'method' => 'string',
         'args'   => 'arg1,arg2,arg3',
-        'group_config_id' => 'factory|Gallery\GroupConfig\GroupConfig'
     );
 
     /**
@@ -72,9 +70,9 @@ class Operation extends \BaseModel {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function groupConfig()
+    public function operable()
     {
-        return $this->belongsTo('Gallery\GroupConfig\GroupConfig', 'group_config_id');
+        return $this->morphTo();
     }
 
     /**

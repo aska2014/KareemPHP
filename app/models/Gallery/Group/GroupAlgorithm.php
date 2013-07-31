@@ -1,4 +1,4 @@
-<?php namespace Gallery\ImageGroup;
+<?php namespace Gallery\Group;
 
 use \Illuminate\Database\Query\Builder;
 
@@ -11,6 +11,6 @@ class ImageGroupAlgorithm extends \BaseAlgorithm {
 	 */
     public function emptyQuery()
     {
-        return ImageGroup::query();
+        return Group::query();
     }
 }

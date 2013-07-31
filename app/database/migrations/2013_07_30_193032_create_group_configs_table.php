@@ -12,7 +12,7 @@ class CreateGroupConfigsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('group_configs', function(Blueprint $table)
+		Schema::create('image_group_specs', function(Blueprint $table)
 		{
             $table->engine = 'InnoDB';
 			$table->increments('id');
@@ -33,7 +33,7 @@ class CreateGroupConfigsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('group_configs');
+		Schema::drop('image_group_specs');
 	}
 
 }

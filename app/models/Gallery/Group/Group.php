@@ -1,8 +1,8 @@
-<?php namespace Gallery\ImageGroup;
+<?php namespace Gallery\Group;
 
 use Illuminate\Database\Eloquent\Collection;
 
-class ImageGroup extends \BaseModel {
+class Group extends \BaseModel {
 
 	/**
 	 * The database table used by the model.
@@ -52,7 +52,7 @@ class ImageGroup extends \BaseModel {
 
     /**
      * @param string $name
-     * @return ImageGroup
+     * @return Group
      */
     public static function getByName( $name )
     {
@@ -70,16 +70,16 @@ class ImageGroup extends \BaseModel {
     /**
      * @return Collection
      */
-    public function getConfigs()
+    public function getSpecs()
     {
-        return $this->configs;
+        return $this->specs;
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function configs()
+    public function specs()
     {
-        return $this->hasMany('Gallery\GroupConfig\GroupConfig');
+        return $this->hasMany('Gallery\GroupSpec\GroupSpec', 'image_group_id');
     }
 }

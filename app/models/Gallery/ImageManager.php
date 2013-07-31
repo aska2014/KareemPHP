@@ -1,14 +1,14 @@
 <?php namespace Gallery;
 
-use Gallery\GroupConfig\GroupConfig;
-use Gallery\ImageGroup\ImageGroup;
+use Gallery\GroupSpec\GroupSpec;
+use Gallery\Group\Group;
 use Intervention\Image\Image as ImageUploader;
 use PathManager\Path;
 
 class ImageManager {
 
     /**
-     * @var ImageGroup\ImageGroup
+     * @var Group\ImageGroup
      */
     protected $imageGroup;
 
@@ -18,10 +18,10 @@ class ImageManager {
     protected $path;
 
     /**
-     * @param ImageGroup $imageGroup
+     * @param Group $imageGroup
      * @param \PathManager\Path $path Base path
      */
-    public function __construct(ImageGroup $imageGroup, Path $path)
+    public function __construct(Group $imageGroup, Path $path)
     {
         $this->imageGroup = $imageGroup;
         $this->path       = $path;
@@ -30,10 +30,10 @@ class ImageManager {
     /**
      * @param ImageUploader $imageUploader
      * @param array $replacers
-     * @param GroupConfig $groupConfig
+     * @param GroupSpec $groupConfig
      * @return bool
      */
-    public function upload(ImageUploader $imageUploader, array $replacers = array(), GroupConfig $groupConfig = null)
+    public function upload(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupConfig = null)
     {
         if(! is_null($groupConfig))
 
@@ -45,10 +45,10 @@ class ImageManager {
     /**
      * @param ImageUploader $imageUploader
      * @param array $replacers
-     * @param GroupConfig $groupConfig
+     * @param GroupSpec $groupConfig
      * @return bool
      */
-    protected function uploadOneConfig(ImageUploader $imageUploader, array $replacers = array(), GroupConfig $groupConfig)
+    protected function uploadOneConfig(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupConfig)
     {
         $uri = $groupConfig->getUri($replacers);
 

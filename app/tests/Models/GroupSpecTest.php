@@ -1,15 +1,12 @@
 <?php namespace Models;
 
-use Gallery\GroupConfig\GroupConfig;
-use Gallery\ImageGroup\ImageGroup;
 use Mockery;
-use core\Operation\Operation;
 
-class GroupConfigTest extends \TestCase {
+class GroupSpecTest extends \TestCase {
 
     public function testCreateNew()
     {
-        return $this->factory->create('Gallery\GroupConfig\GroupConfig', array(
+        return $this->factory->create('Gallery\GroupSpec\GroupSpec', array(
            'uri' => 'users/profile/{user}/image.jpg'
         ));
     }

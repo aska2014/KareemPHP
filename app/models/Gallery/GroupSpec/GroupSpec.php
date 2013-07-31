@@ -1,15 +1,15 @@
-<?php namespace Gallery\GroupConfig;
+<?php namespace Gallery\GroupSpec;
 
 use Helpers\Helper;
 
-class GroupConfig extends \BaseModel {
+class GroupSpec extends \BaseModel {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'group_configs';
+	protected $table = 'image_group_specs';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -48,7 +48,7 @@ class GroupConfig extends \BaseModel {
      */
     public static $factory = array(
         'uri' => 'string',
-        'image_group_id' => 'factory|Gallery\ImageGroup\ImageGroup'
+        'image_group_id' => 'factory|Gallery\Group\Group'
     );
 
     /**
@@ -61,19 +61,19 @@ class GroupConfig extends \BaseModel {
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function operations()
     {
-        return $this->hasMany('Core\Operation\Operation');
+        return $this->morphMany('Core\Operation\Operation', 'operable');
     }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function imageGroup()
+    public function group()
     {
-        return $this->belongsTo('Gallery\ImageGroup\ImageGroup', 'image_group_id');
+        return $this->belongsTo('Gallery\Group\Group', 'image_group_id');
     }
 
     /**

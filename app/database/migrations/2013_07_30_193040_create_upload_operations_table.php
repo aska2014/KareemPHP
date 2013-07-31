@@ -22,8 +22,8 @@ class CreateUploadOperationsTable extends Migration {
             $table->string('method');
             $table->string('args');
 
-            $table->integer('group_config_id')->unsigned();
-            $table->foreign('group_config_id')->references('id')->on('group_configs')->onDelete('CASCADE');
+            $table->string('operable_type');
+            $table->integer('operable_id')->unsigned();
 
 			$table->timestamps();
 		});

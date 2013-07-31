@@ -8,6 +8,7 @@ class OperationTest extends \TestCase {
     public function testAddNewOperation()
     {
         $operation = $this->factory->create('\Core\Operation\Operation', array(
+            'type'   => '\Intervention\Image\Image',
             'method' => 'crop',
             'args'   => '150,150',
         ));
@@ -15,14 +16,6 @@ class OperationTest extends \TestCase {
         $this->assertTrue($operation->save());
 
         return $operation;
-    }
-
-    /**
-     * @depends testAddNewOperation
-     */
-    public function testOperationBelongsToGroupConfig( Operation $operation )
-    {
-        $this->assertNotNull($operation->groupConfig());
     }
 
     /**

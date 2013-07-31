@@ -11,11 +11,11 @@ class ImageManagerTest extends \TestCase {
         $imageUploader = Mockery::mock('\Intervention\Image\Image');
         $imageUploader->shouldReceive('save')->with('baseUri/profile/1/image.jpg')->times(1);
 
-        $groupConfig = Mockery::mock('\Gallery\GroupConfig\GroupConfig');
+        $groupConfig = Mockery::mock('\Gallery\GroupSpec\GroupSpec');
         $groupConfig->shouldReceive('getUri')->times(1);
         $groupConfig->shouldReceive('manipulate')->with($imageUploader)->andReturn($imageUploader)->times(1);
 
-        $imageGroup = Mockery::mock('\Gallery\ImageGroup\ImageGroup');
+        $imageGroup = Mockery::mock('\Gallery\Group\Group');
         $imageGroup->shouldReceive('getConfigs')->andReturn(new Collection(array(
             $groupConfig
         )));

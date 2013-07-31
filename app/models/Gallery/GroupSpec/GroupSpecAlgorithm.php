@@ -1,8 +1,8 @@
-<?php namespace Gallery\GroupConfig;
+<?php namespace Gallery\GroupSpec;
 
 use \Illuminate\Database\Query\Builder;
 
-class GroupConfigAlgorithm extends \BaseAlgorithm {
+class GroupSpecAlgorithm extends \BaseAlgorithm {
 
 	/**
 	 * Get an empty query for this model.
@@ -11,6 +11,6 @@ class GroupConfigAlgorithm extends \BaseAlgorithm {
 	 */
     public function emptyQuery()
     {
-        return GroupConfig::query();
+        return GroupSpec::query();
     }
 }

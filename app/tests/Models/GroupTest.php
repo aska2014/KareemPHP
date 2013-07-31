@@ -1,28 +1,28 @@
 <?php namespace Models;
 
-class ImageGroupTest extends \TestCase {
+class GroupTest extends \TestCase {
 
     public function testCreateNewImageGroup()
     {
-        $imageGroup = $this->factory->create('Gallery\ImageGroup\ImageGroup');
+        $imageGroup = $this->factory->create('Gallery\Group\Group');
 
         $this->assertNotNull($imageGroup);
 
         return $imageGroup;
     }
 
-    public function testHasManyGroupConfigs()
+    public function testHasManyGroupSpecs()
     {
         $imageGroup = $this->testCreateNewImageGroup();
 
-        $imageGroup->configs()->create(array(
+        $imageGroup->specs()->create(array(
             'uri' => 'users/profile/{user}/image.jpg'
         ));
 
-        $imageGroup->configs()->create(array(
+        $imageGroup->specs()->create(array(
             'uri' => 'users/profile/{user}/image.jpg'
         ));
 
-        $this->assertEquals(2, $imageGroup->configs->count());
+        $this->assertEquals(2, $imageGroup->specs->count());
     }
 }
