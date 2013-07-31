@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGroupConfigsTable extends Migration {
+class CreateImageGroupSpecsTable extends Migration {
 
 	/**
 	 * Run the migrations.

@@ -151,6 +151,7 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      * This will validate the model and save it.
      *
      * @param array $attributes
+     * @return \Illuminate\Database\Eloquent\Model|null|static
      */
     public static function create( array $attributes )
     {

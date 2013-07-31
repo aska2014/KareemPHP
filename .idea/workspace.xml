@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a830654a-c891-4526-85f3-05a823b25cfc" name="Default" comment="">
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\CommentTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\GroupSpecTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\GroupTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\ImageManagerTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\ImageTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\OperationTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\PageTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\PostTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\RateTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\UserTest.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\VersionTest.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/BaseModel.php" afterPath="$PROJECT_DIR$/app/models/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_07_30_193032_create_group_configs_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,7 +25,7 @@
     <file path="/OperationTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280373978" ignored="false" />
     <file path="/2013_07_30_193040_create_upload_operations_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303123610" ignored="false" />
     <file path="/Operation.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302973459" ignored="false" />
-    <file path="/2013_07_30_193019_create_image_groups_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375273578072" ignored="false" />
+    <file path="/2013_07_30_193019_create_image_groups_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305912369" ignored="false" />
     <file path="/2013_07_30_193032_create_group_configs_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375274989262" ignored="false" />
     <file path="/GroupConfigTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280544593" ignored="false" />
     <file path="/GroupConfig.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280269922" ignored="false" />
@@ -22,13 +35,17 @@
     <file path="/ImageManager.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291025180" ignored="false" />
     <file path="/ImageManagerTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291441747" ignored="false" />
     <file path="/Path.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375285109291" ignored="false" />
-    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375304507273" ignored="false" />
+    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375307459028" ignored="false" />
     <file path="/GroupSpec.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303038810" ignored="false" />
     <file path="/GroupSpecAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302691690" ignored="false" />
     <file path="/Group.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302901307" ignored="false" />
     <file path="/GroupSpecTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303268420" ignored="false" />
     <file path="/GroupTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303315791" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375304518986" ignored="false" />
+    <file path="/2013_07_30_193032_create_image_group_specs_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305813191" ignored="false" />
+    <file path="/DatabaseSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305944439" ignored="false" />
+    <file path="/ImageSystemSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375307246988" ignored="false" />
+    <file path="/UserTableSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375307214563" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,17 +69,7 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="2013_07_30_193032_create_image_group_specs_table.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="10" selection-start="375" selection-end="375" vertical-scroll-proportion="0.30343512">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -80,12 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Gallery/GroupConfig/GroupConfig.php" />
-        <option value="$PROJECT_DIR$/vendor/kareem3d/path-manager/src/PathManager/Path.php" />
-        <option value="$PROJECT_DIR$/app/models/Gallery/ImageGroup/ImageGroup.php" />
-        <option value="$PROJECT_DIR$/app/models/Gallery/ImageManager.php" />
-        <option value="$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpecAlgorithm.php" />
-        <option value="$PROJECT_DIR$/app/tests/Models/ImageGroupTest.php" />
         <option value="$PROJECT_DIR$/app/tests/Models/GroupConfigTest.php" />
         <option value="$PROJECT_DIR$/app/tests/Models/ImageManagerTest.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_group_configs_table.php" />
@@ -96,6 +97,12 @@
         <option value="$PROJECT_DIR$/app/tests/Models/GroupSpecTest.php" />
         <option value="$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpec.php" />
         <option value="$PROJECT_DIR$/app/models/Gallery/Group/Group.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_07_30_193019_create_image_groups_table.php" />
+        <option value="$PROJECT_DIR$/app/models/BaseModel.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/UserTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/database/seeds/ImageSystemSeeder.php" />
       </list>
     </option>
   </component>
@@ -160,6 +167,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -201,186 +222,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GroupSpec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gallery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Group" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Operation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="seeds" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,14 +305,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19242424" sideWeight="0.6706282" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33030304" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -546,89 +387,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/intervention/image/src/Intervention/Image/Image.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1363" column="21" selection-start="39484" selection-end="39484" vertical-scroll-proportion="0.52671754">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="104" selection-end="104" vertical-scroll-proportion="0.25325885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Gallery/ImageManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="48" selection-start="1379" selection-end="1379" vertical-scroll-proportion="1.6870229">
-          <folding>
-            <element signature="e#26#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpecAlgorithm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="132" selection-end="132" vertical-scroll-proportion="0.18994413">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Gallery/Group/GroupAlgorithm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="41" selection-start="168" selection-end="168" vertical-scroll-proportion="0.22160149">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/ImageTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.38931298">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/ImageManagerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="647" selection-end="647" vertical-scroll-proportion="0.5515267">
-          <folding>
-            <element signature="e#25#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/OperationTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="0.88640594">
-          <folding>
-            <element signature="e#25#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/core/Operation/Operation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="690" selection-end="690" vertical-scroll-proportion="0.259542">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193040_create_upload_operations_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="397" selection-end="397" vertical-scroll-proportion="0.33527133">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/GroupSpecTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="66" selection-start="188" selection-end="188" vertical-scroll-proportion="0.25325885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="28" selection-start="192" selection-end="192" vertical-scroll-proportion="0.3482309">
@@ -636,30 +394,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Gallery/Group/Group.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193040_create_upload_operations_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="62" selection-start="1343" selection-end="1343" vertical-scroll-proportion="0.6201117">
+        <state line="5" column="21" selection-start="117" selection-end="117" vertical-scroll-proportion="-0.37777779">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/GroupTest.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="47" selection-start="639" selection-end="639" vertical-scroll-proportion="0.7914339">
+        <state line="306" column="31" selection-start="8081" selection-end="8081" vertical-scroll-proportion="0.48664123">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_112051_create_contents_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.09497207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_112108_create_histories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.031657357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_112023_create_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_112033_create_versions_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193019_create_image_groups_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="319" selection-end="319" vertical-scroll-proportion="0.2849162">
+        <state line="5" column="23" selection-start="119" selection-end="119" vertical-scroll-proportion="0.031657357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193032_create_image_group_specs_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="375" selection-end="375" vertical-scroll-proportion="0.30343512">
+        <state line="13" column="5" selection-start="229" selection-end="229" vertical-scroll-proportion="0.15828678">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Gallery/Group/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="84" selection-end="84" vertical-scroll-proportion="0.12662943">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="27" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.33206108">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Membership/User/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="255" selection-end="255" vertical-scroll-proportion="-2.0114503">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/ImageSystemSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="225" selection-end="225" vertical-scroll-proportion="-0.44320297">
+          <folding>
+            <element signature="e#7#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/UserTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="34" selection-start="404" selection-end="404" vertical-scroll-proportion="0.47486034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="237" selection-end="237" vertical-scroll-proportion="0.47486034">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/tests/Models/Blog/CommentTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
