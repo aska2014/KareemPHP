@@ -30,6 +30,7 @@ Tracker::instance()->setMechanism(function()
 */
 ClassLoader::addDirectories(array(
 
+    app_path().'/libraries',
 	app_path().'/commands',
 	app_path().'/controllers',
 	app_path().'/models',
@@ -98,3 +99,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Load composer file
+|--------------------------------------------------------------------------
+|
+| Loading composer file which includes all variables to be shared among
+| different views.
+|
+*/
+
+require app_path().'/composers.php';

@@ -1,23 +1,60 @@
 <?php
 
+use Blog\Post\PostAlgorithm;
+use Blog\Archive;
+
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
+    const POSTS_PER_PAGE = 12;
 
-	public function showWelcome()
+    /**
+     * @param PostAlgorithm $postAlgorithm
+     * @param Archive $blogArchive
+     */
+    public function __construct( PostAlgorithm $postAlgorithm, Archive $blogArchive )
+    {
+        $this->postAlgorithm = $postAlgorithm;
+
+        $this->blogArchive = $blogArchive;
+    }
+
+    /**
+     * @return Response
+     */
+    public function index()
 	{
-		return View::make('hello');
+        $posts = $this->postAlgorithm->orderByPostDate('desc')->paginate(self::POSTS_PER_PAGE);
+
+        $homeTitle = 'Recent tutorials';
+
+		return View::make('home.index', compact('posts', 'homeTitle'));
 	}
 
+    /**
+     * @return Response
+     */
+    public function search()
+    {
+        $keyword = Input::get('keyword', '');
+
+        $posts = $this->postAlgorithm->search($keyword)->paginate(self::POSTS_PER_PAGE);
+
+        $homeTitle = 'Searching tutorials with keyword: ' . $keyword;
+
+        return View::make('home.index', compact('posts', 'homeTitle'));
+    }
+
+    /**
+     * @param $year
+     * @param $month
+     * @return Response
+     */
+    public function showByDate( $year, $month )
+    {
+        $posts = $this->postAlgorithm->year($year)->month($month)->paginate(self::POSTS_PER_PAGE);
+
+        $homeTitle = 'Tutorials in year: ' . $year . ' and month: ' . $month;
+
+        return View::make('home.index', compact('posts', 'homeTitle'));
+    }
 }

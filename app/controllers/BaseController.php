@@ -2,6 +2,11 @@
 
 class BaseController extends Controller {
 
+    /**
+     * @var array
+     */
+    protected $errors = array();
+
 	/**
 	 * Setup the layout used by the controller.
 	 *

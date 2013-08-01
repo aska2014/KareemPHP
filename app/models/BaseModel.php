@@ -129,7 +129,6 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
     /**
      * Each time this method is called the model is validated from all over again
      *
-     * @param array $options
      * @return bool
      */
     public function validate()

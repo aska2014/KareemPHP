@@ -77,6 +77,60 @@ class Post extends \BaseModel {
     );
 
     /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDifficulty()
+    {
+        switch($this->difficulty)
+        {
+            case self::BEGINNER:
+                return 'beginner';
+
+            case self::INTERMEDIATE:
+                return 'intermediate';
+
+            case self::ADVANCED:
+            default:
+                return 'advanced';
+        }
+    }
+
+    /**
+     * @param string $format
+     * @return string
+     */
+    public function getPostedAt( $format = '' )
+    {
+        if($format)
+            return date($format, strtotime($this->posted_at));
+        return $this->posted_at;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
      * @param $slug
      */
     public function setSlugAttribute( $slug )
@@ -154,7 +208,7 @@ class Post extends \BaseModel {
     }
 
     /**
-     * @return Illuminate\Database\Query\Builder
+     * @return \Illuminate\Database\Query\Builder
      */
     public function user()
     {

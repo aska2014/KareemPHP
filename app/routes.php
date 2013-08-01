@@ -11,7 +11,15 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+EasyRoute::controller('HomeController', array(
+
+    'home' => array('home.html', 'index')
+
+));
+
+
+EasyRoute::controller('PostsController', array(
+
+    'post' => array('post/{slug}-{id}.html', 'show')
+
+));

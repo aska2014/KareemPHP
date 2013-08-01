@@ -55,6 +55,14 @@ class Version extends \BaseModel {
     );
 
     /**
+     * @return string
+     */
+    public function getUrl()
+    {
+
+    }
+
+    /**
      * Generate version dimensions.
      *
      * @param  string $url

@@ -10,12 +10,11 @@ abstract class BaseAlgorithm {
     protected $query = null;
 
     /**
-     * @param Builder $query
      * @return BaseAlgorithm
      */
-    public function __construct( Builder $query = null )
+    public function __construct()
     {
-        $this->query = $query ?: $this->emptyQuery();
+        $this->query = $this->emptyQuery();
     }
 
     /**
@@ -43,9 +42,30 @@ abstract class BaseAlgorithm {
     }
 
     /**
-     * @return Builder
+     * @return int
      */
-    public abstract function emptyQuery();
+    public function count()
+    {
+        $count = $this->getQuery()->count();
+
+        $this->reset();
+
+        return $count;
+    }
+
+    /**
+     * @param int $perPage
+     * @param array $columns
+     * @return \Illuminate\Pagination\Paginator
+     */
+    public function paginate($perPage = 15, $columns = array('*'))
+    {
+        $paginator = $this->getQuery()->paginate($perPage, $columns);
+
+        $this->reset();
+
+        return $paginator;
+    }
 
     /**
      * @param array $columns
@@ -110,4 +130,9 @@ abstract class BaseAlgorithm {
 
         return $this;
     }
+
+    /**
+     * @return Builder
+     */
+    public abstract function emptyQuery();
 }
