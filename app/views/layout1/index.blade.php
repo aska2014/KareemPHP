@@ -42,11 +42,15 @@
     <A id="copyright_services" href="#">JustDevelopWebsites</a>
 </div>
 
-@include('parts.scrolltop')
+@if(in_array('scroll_top', $mainParts))
+    @include('parts.scroll_top')
+@endif
 
-@include('parts.modal')
+@if(in_array('modal', $mainParts))
+    @include('parts.modal')
+@endif
 
-@include('parts.phptojavascript');
+@include('parts.php_javascript');
 
 {{ Asset::scripts() }}
 

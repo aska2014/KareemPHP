@@ -13,7 +13,8 @@
 
 EasyRoute::controller('HomeController', array(
 
-    'home' => array('home.html', 'index')
+    'home' => array('home.html', 'index'),
+    'archive' => array('blog-archive/{year}/{month?}', 'archive')
 
 ));
 

@@ -38,7 +38,7 @@ abstract class BaseAlgorithm {
      */
     public function reset()
     {
-        $this->query = null;
+        $this->query = $this->emptyQuery();
     }
 
     /**

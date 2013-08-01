@@ -1,5 +1,6 @@
 <?php namespace Blog\Post;
 
+use DB;
 use Blog\Post\Post;
 use \Illuminate\Database\Query\Builder;
 

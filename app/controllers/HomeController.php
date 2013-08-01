@@ -1,7 +1,7 @@
 <?php
 
 use Blog\Post\PostAlgorithm;
-use Blog\Archive;
+use Blog\Archive\Archive;
 
 class HomeController extends BaseController {
 
@@ -9,13 +9,10 @@ class HomeController extends BaseController {
 
     /**
      * @param PostAlgorithm $postAlgorithm
-     * @param Archive $blogArchive
      */
-    public function __construct( PostAlgorithm $postAlgorithm, Archive $blogArchive )
+    public function __construct( PostAlgorithm $postAlgorithm )
     {
         $this->postAlgorithm = $postAlgorithm;
-
-        $this->blogArchive = $blogArchive;
     }
 
     /**
@@ -49,11 +46,16 @@ class HomeController extends BaseController {
      * @param $month
      * @return Response
      */
-    public function showByDate( $year, $month )
+    public function archive( $year, $month = 0 )
     {
-        $posts = $this->postAlgorithm->year($year)->month($month)->paginate(self::POSTS_PER_PAGE);
+        $posts = $this->postAlgorithm->year($year);
 
-        $homeTitle = 'Tutorials in year: ' . $year . ' and month: ' . $month;
+        if($month) $posts = $posts->month($month)->paginate(self::POSTS_PER_PAGE);
+        else       $posts = $posts->paginate(self::POSTS_PER_PAGE);
+
+        $homeTitle = 'Tutorials in year: ' . $year;
+
+        if($month) $homeTitle .= ' and month: ' . $month;
 
         return View::make('home.index', compact('posts', 'homeTitle'));
     }

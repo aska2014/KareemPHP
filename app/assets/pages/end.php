@@ -1,3 +1,3 @@
 <?php
 
-\Asset\Asset::add('global', 'js/global.js');
+Asset::add('global', 'my_assets/js/global.js');

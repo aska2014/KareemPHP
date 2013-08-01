@@ -1,3 +1,3 @@
 <?php
 
-\Asset\Asset::add('modal', 'plugins/modal/js/jquery.reveal.js');
+Asset::add('modal', 'plugins/modal/js/jquery.reveal.js');
