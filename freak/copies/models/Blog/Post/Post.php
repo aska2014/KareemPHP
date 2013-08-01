@@ -4,7 +4,7 @@ use Gallery\Image\Image;
 use Membership\User\User;
 
 class Post extends \BaseModel {
-
+	protected $connection = 'server';
     /**
      * State constants
      */
@@ -131,7 +131,7 @@ class Post extends \BaseModel {
     }
 
     /**
-     * @param string $slug
+     * @param $slug
      */
     public function setSlugAttribute( $slug )
     {

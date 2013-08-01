@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePagesTable extends Migration {
+class CreatePageTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -17,7 +17,7 @@ class CreatePagesTable extends Migration {
             $table->engine = 'InnoDB';
             $table->increments('id');
 
-            $table->string('uri');
+            $table->string('slug');
             $table->string('title');
             $table->text('description');
 
