@@ -12,5 +12,7 @@
 */
 
 Artisan::add(new CreateMigrationsCommand());
-
 Artisan::add(new CreateModelsCommand());
+
+Artisan::add(new FreakModelCommand());
+Artisan::add(new FreakModelDeleteCommand());

@@ -20,7 +20,7 @@
                     <tr>
 
                         <td>{{ $page->title }}</td>
-                        <th><a href="http://arrabah.net/public/page/{{ Str::slug(Str::words($page->english_title, 3)) . '-' . $page->id }}.html">http://arrabah.net/public/page/{{ Str::slug(Str::words($page->english_title, 3)) . '-' . $page->id }}.html</a></th>
+                        <th><a href="{{ $baseUrl . '/' . $page->slug }}">{{ $baseUrl . '/' . $page->slug }}</a></th>
                         <td class="action-col" width="10%">
                             <span class="btn-group">
                                 <a href="{{ URL::to('model/Page/' . $page->id) }}" class="btn btn-small"><i class="icon-search"></i></a>

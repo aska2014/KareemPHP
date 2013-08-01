@@ -131,7 +131,7 @@ class Post extends \BaseModel {
     }
 
     /**
-     * @param $slug
+     * @param string $slug
      */
     public function setSlugAttribute( $slug )
     {

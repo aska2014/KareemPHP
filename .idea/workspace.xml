@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a830654a-c891-4526-85f3-05a823b25cfc" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_07_30_112042_create_pages_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_07_30_112051_create_contents_table.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_07_30_112059_create_places_table.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Post/Post.php" afterPath="$PROJECT_DIR$/app/models/Blog/Post/Post.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml" afterPath="$PROJECT_DIR$/phpunit.xml" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_08_01_202926_create_place_table.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/controllers/PageController.php" afterPath="$PROJECT_DIR$/freak/controllers/PageController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Post/Post.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Post/Post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/add.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/artisan.php" afterPath="$PROJECT_DIR$/app/start/artisan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/data.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/data.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/detail.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/detail.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_08_01_202930_create_page_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_08_01_202920_create_page_table.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375390332215" ignored="false" />
+    <file path="/Dummy.txt" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394150817" ignored="false" />
     <file path="/Helper.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375219337809" ignored="false" />
     <file path="/OperationTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280373978" ignored="false" />
     <file path="/2013_07_30_193040_create_upload_operations_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303123610" ignored="false" />
@@ -26,7 +29,7 @@
     <file path="/ImageManager.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291025180" ignored="false" />
     <file path="/ImageManagerTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291441747" ignored="false" />
     <file path="/Path.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375285109291" ignored="false" />
-    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365341661" ignored="false" />
+    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395881740" ignored="false" />
     <file path="/GroupSpec.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303038810" ignored="false" />
     <file path="/GroupSpecAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302691690" ignored="false" />
     <file path="/Group.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302901307" ignored="false" />
@@ -80,6 +83,14 @@
     <file path="/PageTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375392813838" ignored="false" />
     <file path="/ContentTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375393402285" ignored="false" />
     <file path="/PlaceTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375393519142" ignored="false" />
+    <file path="/2013_08_01_220048_create_places_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394691772" ignored="false" />
+    <file path="/PageController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394967797" ignored="false" />
+    <file path="/data.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395227735" ignored="false" />
+    <file path="/detail.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395306144" ignored="false" />
+    <file path="/add.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395510428" ignored="false" />
+    <file path="/artisan.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395985652" ignored="false" />
+    <file path="/FreakModelCommand.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395888622" ignored="false" />
+    <file path="/FreakModelDeleteCommand.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395892992" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,22 +132,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Blog/Archive/Archive.php" />
-        <option value="$PROJECT_DIR$/app/composers.php" />
-        <option value="$PROJECT_DIR$/public/my_assets/css/style.css" />
-        <option value="$PROJECT_DIR$/app/views/layout1/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202918_create_content_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Website/Content/Content.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202926_create_place_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Website/Place/Place.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202930_create_page_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Blog/Post/Post.php" />
-        <option value="$PROJECT_DIR$/app/models/Blog/Page/Page.php" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
         <option value="$PROJECT_DIR$/app/models/Website/Page/Page.php" />
         <option value="$PROJECT_DIR$/app/tests/Models/Website/PageTest.php" />
         <option value="$PROJECT_DIR$/app/tests/Models/Website/ContentTest.php" />
         <option value="$PROJECT_DIR$/app/tests/Models/Website/PlaceTest.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202918_create_content_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202926_create_place_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_220048_create_places_table.php" />
+        <option value="$PROJECT_DIR$/freak/views/pages/detail.blade.php" />
+        <option value="$PROJECT_DIR$/freak/views/pages/add.blade.php" />
+        <option value="$PROJECT_DIR$/freak/controllers/PageController.php" />
+        <option value="$PROJECT_DIR$/freak/views/pages/data.blade.php" />
+        <option value="$PROJECT_DIR$/app/commands/ModelCommand.php" />
+        <option value="$PROJECT_DIR$/app/start/artisan.php" />
+        <option value="$PROJECT_DIR$/app/commands/FreakModelDeleteCommand.php" />
+        <option value="$PROJECT_DIR$/app/commands/FreakModelCommand.php" />
       </list>
     </option>
   </component>
@@ -219,7 +230,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="start" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -237,107 +248,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Place" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="commands" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -349,14 +260,14 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="D:/website/blank_freak" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="PHP Script.Place.php">
     <configuration default="false" name="Place.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/app/models/Website/Place/Place.php">
@@ -438,7 +349,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19242424" sideWeight="0.6706282" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35833332" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36439395" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -515,108 +426,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/freak/models/content.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193040_create_upload_operations_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freak/controllers/AppController.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_28_164606_create_rates_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="44" selection-start="127" selection-end="127" vertical-scroll-proportion="0.24022347" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/freak/controllers/ContentController.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_220048_create_places_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="184" selection-end="184" vertical-scroll-proportion="0.3482309" />
+        <state line="13" column="5" selection-start="220" selection-end="220" vertical-scroll-proportion="0.2718808">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202918_create_content_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="472" selection-end="472" vertical-scroll-proportion="0.37988827" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202926_create_place_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="52" selection-start="654" selection-end="654" vertical-scroll-proportion="0.6063618">
+        <state line="16" column="38" selection-start="320" selection-end="320" vertical-scroll-proportion="0.30353817">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202930_create_page_table.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202920_create_page_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="426" selection-end="426" vertical-scroll-proportion="0.25325885">
+        <state line="22" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.39851025">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Blog/Post/Post.php">
+    <entry file="file://$PROJECT_DIR$/freak/controllers/ContentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="21" selection-start="2485" selection-end="2485" vertical-scroll-proportion="0.37988827">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/copies/models/Blog/Page/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="55" selection-end="55" vertical-scroll-proportion="0.12662943">
+        <state line="190" column="5" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.57824427">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Blog/Page/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="148" selection-end="148" vertical-scroll-proportion="0.2849162">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="41" selection-start="608" selection-end="608" vertical-scroll-proportion="0.5133215">
+        <state line="4" column="6" selection-start="55" selection-end="55" vertical-scroll-proportion="-0.74115455">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Website/Page/Page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="61" selection-start="1280" selection-end="1280" vertical-scroll-proportion="-12.807693">
+        <state line="52" column="6" selection-start="945" selection-end="945" vertical-scroll-proportion="0.33519554">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/Website/PageTest.php">
+    <entry file="file://$PROJECT_DIR$/freak/views/pages/detail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="41" selection-start="693" selection-end="693" vertical-scroll-proportion="-12.153846">
+        <state line="20" column="36" selection-start="925" selection-end="925" vertical-scroll-proportion="0.45419848">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/Website/ContentTest.php">
+    <entry file="file://$PROJECT_DIR$/freak/views/contents/data.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="25" selection-start="620" selection-end="620" vertical-scroll-proportion="0.5251397">
-          <folding>
-            <element signature="e#34#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests/Models/Website/PlaceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="264" selection-end="264" vertical-scroll-proportion="0.44320297">
+        <state line="52" column="25" selection-start="2320" selection-end="2320" vertical-scroll-proportion="1.5839695">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Website/Content/Content.php">
+    <entry file="file://$PROJECT_DIR$/freak/views/pages/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="42" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.5065177">
+        <state line="23" column="26" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.7461832">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Website/Place/Place.php">
+    <entry file="file://$PROJECT_DIR$/freak/views/pages/data.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="5" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.5251397">
+        <state line="24" column="40" selection-start="894" selection-end="894" vertical-scroll-proportion="0.45038167">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/controllers/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="44" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5458015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/start/artisan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="558" selection-end="558" vertical-scroll-proportion="0.25325885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/commands/FreakModelDeleteCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.7467412">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/commands/FreakModelCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="20" selection-start="676" selection-end="681" vertical-scroll-proportion="-0.3482309">
           <folding />
         </state>
       </provider>

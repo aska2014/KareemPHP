@@ -43,8 +43,8 @@
                     <tr>
                         <th>Page Url</th>
                         <td>
-                            <a href="{{ $baseUrl . '/' . $page->uri }}">
-                                {{ $baseUrl . '/' . $page->uri }}
+                            <a href="{{ $baseUrl . '/' . $page->slug }}">
+                                {{ $baseUrl . '/' . $page->slug }}
                             </a>
                         </td>
                     </tr>

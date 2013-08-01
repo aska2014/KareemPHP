@@ -29,7 +29,7 @@
                     <label class="control-label">Url</label>
                     <div class="controls">
                         <div class="input-prepend">
-                            <span class="add-on">{{ $baseUrl }}</span><input name="Page[uri]" value="{{ $page->uri }}" type="text" id="english_title" class="span5">
+                            <span class="add-on">{{ $baseUrl }}</span><input name="Page[slug]" value="{{ $page->slug }}" type="text" id="english_title" class="span5">
                         </div>
                     </div>
                 </div>

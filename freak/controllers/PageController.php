@@ -21,7 +21,9 @@ class PageController extends AppController {
 
 		$pages = Page::all();
 
-		return View::make('pages.data', compact('pages'));
+        $baseUrl = App::make('app\models\Host\HostRepository')->getBaseUrl();
+
+		return View::make('pages.data', compact('pages', 'baseUrl'));
 	}
 
 	/**
@@ -74,7 +76,7 @@ class PageController extends AppController {
 		$validator = Validator::make(Input::get('Page'), array(
 
 			'title' => 'required',
-			'uri'   => 'required',
+			'slug'   => 'required',
 			'description' => 'required'
 
 		));
@@ -100,7 +102,7 @@ class PageController extends AppController {
 
 		$page = Page::create(array(
 			
-			'uri'           => urlencode($inputs['uri']),
+			'slug'          => $inputs['slug'],
 			'title'         => $inputs['title'],
 			'description'   => $inputs['description']
 
@@ -129,7 +131,7 @@ class PageController extends AppController {
 
 		$page->update(array(
 			
-			'english_title' => $inputs['english_title'],
+			'slug'          => $inputs['slug'],
 			'title'         => $inputs['title'],
 			'description'   => $inputs['description']
 
