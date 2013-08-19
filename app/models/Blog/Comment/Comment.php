@@ -1,6 +1,10 @@
 <?php namespace Blog\Comment;
 
+use Illuminate\Database\Eloquent\Collection;
+
 class Comment extends \BaseModel implements \AcceptableInterface, \PolymorphicInterface {
+
+    use \Acceptable;
 
 	/**
 	 * The database table used by the model.
@@ -52,54 +56,43 @@ class Comment extends \BaseModel implements \AcceptableInterface, \PolymorphicIn
         'user_id' => 'factory|Membership\User\User'
     );
 
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
     /**
      * @param \BaseModel $model
-     * @return mixed
+     * @return Comment
      */
     public function attachTo( \BaseModel $model )
     {
         if(method_exists($model, 'comments')){
 
-            return $model->comments()->save($model);
+            $model->comments()->save($this);
         }
+
+        return $this;
     }
 
     /**
-     * Accept current object.
-     *
-     * @return void
+     * @return Collection
      */
-    public function accept()
+    public function getAcceptedReplies()
     {
-        $this->accepted = true;
-
-        $this->save();
+        return $this->replies()->where('accepted', true)->get();
     }
 
     /**
-     * Un accept current object.
-     *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function unAccept()
+    public function commentable()
     {
-        $this->accepted = false;
-
-        $this->save();
-    }
-
-    /**
-     * Throws an exception if not accepted
-     *
-     * @throws NotAcceptedException
-     * @return void
-     */
-    public function failIfNotAccepted()
-    {
-        if(! $this->accepted) {
-
-            throw new NotAcceptedException;
-        }
+        return $this->morphTo();
     }
 
     /**
@@ -108,5 +101,21 @@ class Comment extends \BaseModel implements \AcceptableInterface, \PolymorphicIn
     public function user()
     {
         return $this->belongsTo('Membership\User\User');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function parent()
+    {
+        return $this->belongsTo('Blog\Comment\Comment', 'parent_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function replies()
+    {
+        return $this->hasMany('Blog\Comment\Comment', 'parent_id');
     }
 }

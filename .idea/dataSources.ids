@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="KareemPHP" product="MySQL" version="5.5.24-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a7050746-3cb9-4e02-9c9b-70087d050ccf">
+  <data-source source="LOCAL" name="KareemPHP" product="MySQL" version="5.6.12-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a7050746-3cb9-4e02-9c9b-70087d050ccf">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <synchronize>true</synchronize>
@@ -19,13 +19,26 @@
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="description" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="accepted" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
-      <column name="commetable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="commentable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="commentable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="parent_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="comments_parent_id_foreign" columns="parent_id" ref-table="comments" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="comments_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <exported-key name="comments_parent_id_foreign" table="comments" schema="" catalog="kareemphp" columns="parent_id"/>
+    </table>
+    <table name="contact_us" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="message" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="contact_us_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="contents" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -34,16 +47,39 @@
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="places_content_id_foreign" table="places" schema="" catalog="kareemphp" columns="content_id"/>
     </table>
-    <table name="group_configs" schema="" catalog="kareemphp" type="TABLE">
+    <table name="demos" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="uri" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="image_group_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="link" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="demoable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="demoable_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="group_configs_image_group_id_foreign" columns="image_group_id" ref-table="image_groups" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
-      <exported-key name="operations_group_config_id_foreign" table="operations" schema="" catalog="kareemphp" columns="group_config_id"/>
+    </table>
+    <table name="downloads" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="link" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="number_of_downloads" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="downloadable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="downloadable_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="galleries" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="gallerable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="gallerable_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="galleries_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="hack_attempts" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -66,18 +102,28 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="histories_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
+    <table name="image_group_specs" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="uri" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="image_group_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="image_group_specs_image_group_id_foreign" columns="image_group_id" ref-table="image_groups" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
     <table name="image_groups" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="group_configs_image_group_id_foreign" table="group_configs" schema="" catalog="kareemphp" columns="image_group_id"/>
+      <exported-key name="image_group_specs_image_group_id_foreign" table="image_group_specs" schema="" catalog="kareemphp" columns="image_group_id"/>
     </table>
     <table name="images" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="accepted" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
+      <column name="order" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="imageable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="imageable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
@@ -87,24 +133,43 @@
       <foreign-key name="images_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="versions_image_id_foreign" table="versions" schema="" catalog="kareemphp" columns="image_id"/>
     </table>
+    <table name="k_posts" schema="" catalog="kareemphp" type="TABLE">
+      <column name="postID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="_desc" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="tags" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="difficulty" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="rate" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="featured" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="demo" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="download" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="Jyc="/>
+      <column name="likes" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="active" sqlType="ENUM" length="2" precision="0" nullable="true" jdbcType="1" def="JzAn"/>
+      <column name="type" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="_order" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="sign_date" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="no_downloads" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="postID"/>
+    </table>
     <table name="migrations" schema="" catalog="kareemphp" type="TABLE">
       <column name="migration" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="batch" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
     </table>
     <table name="operations" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" def="JzMyNGFkc1NEMTIzQCMn"/>
+      <column name="type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="method" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="args" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="group_config_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="operable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="operable_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="operations_group_config_id_foreign" columns="group_config_id" ref-table="group_configs" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
     <table name="pages" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="uri" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="slug" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
       <column name="parent_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
@@ -119,17 +184,18 @@
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="identifier" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
-      <column name="placeable_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="placeable_type" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="page_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="content_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="places_content_id_foreign" columns="content_id" ref-table="contents" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="2" deferrability="2"/>
       <foreign-key name="places_page_id_foreign" columns="page_id" ref-table="pages" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="2" deferrability="2"/>
     </table>
     <table name="postpages" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="body" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="order" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="post_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
@@ -145,7 +211,7 @@
       <column name="difficulty" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5" def="MA=="/>
       <column name="state" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5" def="MA=="/>
       <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
-      <column name="copy_of_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="copy_of_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="true" jdbcType="4"/>
       <column name="deleted_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
       <column name="posted_at" sqlType="DATETIME" length="19" precision="0" nullable="false" jdbcType="93"/>
       <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
@@ -167,12 +233,32 @@
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="rates_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
+    <table name="services" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="TEXT" length="65535" precision="0" nullable="false" jdbcType="-1"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="subscribes" schema="" catalog="kareemphp" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="new_tutorials" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7"/>
+      <column name="user_id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="subscribes_user_id_foreign" columns="user_id" ref-table="users" ref-schema="" ref-catalog="kareemphp" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
     <table name="users" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="first_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="username" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="ip" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
+      <column name="website" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12"/>
       <column name="type" sqlType="SMALLINT" length="5" precision="0" nullable="false" jdbcType="5" def="MA=="/>
       <column name="accepted" sqlType="BIT" length="0" precision="0" nullable="false" jdbcType="-7" def="MA=="/>
       <column name="deleted_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="true" jdbcType="93"/>
@@ -180,10 +266,13 @@
       <column name="updated_at" sqlType="TIMESTAMP" length="19" precision="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="comments_user_id_foreign" table="comments" schema="" catalog="kareemphp" columns="user_id"/>
+      <exported-key name="contact_us_user_id_foreign" table="contact_us" schema="" catalog="kareemphp" columns="user_id"/>
+      <exported-key name="galleries_user_id_foreign" table="galleries" schema="" catalog="kareemphp" columns="user_id"/>
       <exported-key name="histories_user_id_foreign" table="histories" schema="" catalog="kareemphp" columns="user_id"/>
       <exported-key name="images_user_id_foreign" table="images" schema="" catalog="kareemphp" columns="user_id"/>
       <exported-key name="posts_user_id_foreign" table="posts" schema="" catalog="kareemphp" columns="user_id"/>
       <exported-key name="rates_user_id_foreign" table="rates" schema="" catalog="kareemphp" columns="user_id"/>
+      <exported-key name="subscribes_user_id_foreign" table="subscribes" schema="" catalog="kareemphp" columns="user_id"/>
     </table>
     <table name="versions" schema="" catalog="kareemphp" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true"/>

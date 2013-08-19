@@ -35,6 +35,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+    app_path().'/exceptions'
 
 ));
 
@@ -69,6 +70,12 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+});
+
+
+App::error(function(GeneralException $exception, $code)
+{
+    dd($exception->getMessage());
 });
 
 /*
@@ -111,3 +118,14 @@ require app_path().'/filters.php';
 */
 
 require app_path().'/composers.php';
+
+/*
+|--------------------------------------------------------------------------
+| Load bindings file
+|--------------------------------------------------------------------------
+|
+| Loading bindings file which includes all bindings in the IoC container.
+|
+*/
+
+require app_path().'/bindings.php';

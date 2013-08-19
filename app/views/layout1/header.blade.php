@@ -1,6 +1,6 @@
 <div id="header">
     <div id="bottom">
-        <a href="http://localhost/Blogging_website.com/" id="logo_link" title="@justdevelopwebsites"><div id="logo"></div></a>
+        <a href="{{ URL::route('home') }}" id="logo_link" title="@justdevelopwebsites"><div id="logo"></div></a>
     </div>
     <div id="languages">
     </div>
@@ -9,13 +9,14 @@
 
 <div id="menu">
     <ul>
-        <li class="active"><a id="menu_home" href="http://localhost/Blogging_website.com/">Home</a></li>
-        <li ><a id="menu_request" href="http://localhost/Blogging_website.com/request-tutorial.html">Request Tutorial</a></li>
-        <li ><a id="menu_services" href="http://localhost/Blogging_website.com/services.html">Services</a></li>
-        <li ><a id="menu_about" href="http://localhost/Blogging_website.com/about.html" rel="author">About Blogger</a></li>
+        <li{{ EasyRoute::is('home')     ? ' class="active"' : '' }}><a id="menu_home" href="{{ URL::route('home') }}">Home</a></li>
+        <li{{ EasyRoute::is('services') ? ' class="active"' : '' }}><a id="menu_services" href="{{ URL::route('services') }}">Services</a></li>
+        @foreach($menuPages as $page)
+        <li{{ EasyRoute::is($page->slug)? ' class="active"' : '' }}><a id="menu_services" href="{{ URL::to($page->slug) }}">{{ $page->title }}</a></li>
+        @endforeach
     </ul>
     <div id="search">
-        <form action="http://localhost/Blogging_website.com/tutorials/search.html" method="get">
+        <form action="{{ URL::route('search') }}" method="get">
             <input type="submit" class="smbt" VALUE="" />
             <input type="text" class="txt" id="search_txt" value="Search tutorials..." onfocus="if(this.value == 'Search tutorials...')this.value = '';" onblur="if(this.value == '')this.value = 'Search tutorials...';" name="keyword" />
         </form>

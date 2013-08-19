@@ -5,7 +5,7 @@ use Blog\Archive\Archive;
 
 class HomeController extends BaseController {
 
-    const POSTS_PER_PAGE = 12;
+    const POSTS_PER_PAGE = 9;
 
     /**
      * @param PostAlgorithm $postAlgorithm
@@ -20,7 +20,7 @@ class HomeController extends BaseController {
      */
     public function index()
 	{
-        $posts = $this->postAlgorithm->orderByPostDate('desc')->paginate(self::POSTS_PER_PAGE);
+        $posts = $this->postAlgorithm->postState()->orderByPostDate('desc')->paginate(self::POSTS_PER_PAGE);
 
         $homeTitle = 'Recent tutorials';
 
@@ -34,7 +34,7 @@ class HomeController extends BaseController {
     {
         $keyword = Input::get('keyword', '');
 
-        $posts = $this->postAlgorithm->search($keyword)->paginate(self::POSTS_PER_PAGE);
+        $posts = $this->postAlgorithm->postState()->search($keyword)->paginate(self::POSTS_PER_PAGE);
 
         $homeTitle = 'Searching tutorials with keyword: ' . $keyword;
 
@@ -48,14 +48,14 @@ class HomeController extends BaseController {
      */
     public function archive( $year, $month = 0 )
     {
-        $posts = $this->postAlgorithm->year($year);
+        $posts = $this->postAlgorithm->postState()->year($year);
 
         if($month) $posts = $posts->month($month)->paginate(self::POSTS_PER_PAGE);
         else       $posts = $posts->paginate(self::POSTS_PER_PAGE);
 
         $homeTitle = 'Tutorials in year: ' . $year;
 
-        if($month) $homeTitle .= ' and month: ' . $month;
+        if($month) $homeTitle .= ' and month: ' . date('F', mktime(0, 0, 0, $month, 1, 0));
 
         return View::make('home.index', compact('posts', 'homeTitle'));
     }

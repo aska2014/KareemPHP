@@ -1,78 +1,93 @@
 <?php namespace Gallery;
 
-use Gallery\GroupSpec\GroupSpec;
 use Gallery\Group\Group;
+use Gallery\GroupSpec\GroupSpec;
+use Gallery\Version\Version;
 use Intervention\Image\Image as ImageUploader;
 use PathManager\Path;
 
 class ImageManager {
 
     /**
-     * @var Group\ImageGroup
+     * @var Group
      */
-    protected $imageGroup;
+    protected $group;
 
     /**
-     * @var \PathManager\Path
+     * @var Path
      */
     protected $path;
 
     /**
-     * @param Group $imageGroup
-     * @param \PathManager\Path $path Base path
+     * @var Version
      */
-    public function __construct(Group $imageGroup, Path $path)
+    protected $versions;
+
+    /**
+     * @param Group $group
+     * @param Path $path Base path
+     * @param Version $versions
+     * @return \Gallery\ImageManager
+     */
+    public function __construct(Group $group, Path $path, Version $versions)
     {
-        $this->imageGroup = $imageGroup;
-        $this->path       = $path;
+        $this->group    = $group;
+        $this->path     = $path;
+        $this->versions = $versions;
     }
 
     /**
      * @param ImageUploader $imageUploader
      * @param array $replacers
-     * @param GroupSpec $groupConfig
-     * @return bool
+     * @param GroupSpec $groupSpec
+     * @return Version|Version[]
      */
-    public function upload(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupConfig = null)
+    public function upload(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupSpec = null)
     {
-        if(! is_null($groupConfig))
+        if(! is_null($groupSpec))
 
-            return $this->uploadOneConfig($imageUploader, $replacers, $groupConfig);
+            return $this->uploadOne($imageUploader, $replacers, $groupSpec);
 
-        return $this->uploadAllConfigs($imageUploader, $replacers);
+        return $this->uploadAll($imageUploader, $replacers);
     }
 
     /**
      * @param ImageUploader $imageUploader
      * @param array $replacers
-     * @param GroupSpec $groupConfig
-     * @return bool
+     * @param GroupSpec $groupSpec
+     * @return Version
      */
-    protected function uploadOneConfig(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupConfig)
+    protected function uploadOne(ImageUploader $imageUploader, array $replacers = array(), GroupSpec $groupSpec)
     {
-        $uri = $groupConfig->getUri($replacers);
+        $uri = $groupSpec->getUri($replacers);
 
-        $destination = $this->path->make((string) $this->path . $uri);
+        $destination = $this->path->make((string) $this->path . '\\' . $uri);
 
         $destination->makeSureItExists();
 
-        $groupConfig->manipulate($imageUploader)->save((string) $destination);
+        $groupSpec->manipulate($imageUploader)->save((string) $destination);
 
-        return true;
+        return $this->versions->newInstance(array(
+            'width'  => $imageUploader->width,
+            'height' => $imageUploader->height,
+            'url'    => $destination->toUrl()
+        ));
     }
 
     /**
      * @param ImageUploader $imageUploader
      * @param array $replacers
-     * @return bool
+     * @return Version[]
      */
-    protected function uploadAllConfigs(ImageUploader $imageUploader, array $replacers = array())
+    protected function uploadAll(ImageUploader $imageUploader, array $replacers = array())
     {
-        foreach($this->imageGroup->getConfigs() as $groupConfig)
+        $versions = array();
+
+        foreach($this->group->getSpecs() as $groupSpec)
         {
-            $this->uploadOneConfig($imageUploader, $replacers, $groupConfig);
+            $versions[] = $this->uploadOne($imageUploader, $replacers, $groupSpec);
         }
 
-        return true;
+        return $versions;
     }
 }

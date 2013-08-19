@@ -23,11 +23,11 @@ class FreakModelCommand extends Command {
 
 	protected $model;
 
-	/**
-	 * Create a new command instance.
-	 *
-	 * @return void
-	 */
+    /**
+     * Create a new command instance.
+     *
+     * @return \FreakModelCommand
+     */
 	public function __construct()
 	{
 		parent::__construct();
@@ -50,7 +50,7 @@ class FreakModelCommand extends Command {
 
 		} else {
 
-			$tmp_path = __DIR__ . '/templates';
+			$tmp_path = __DIR__ . '/templates/freak';
 
 			// Create controller for this model
 			$this->copyTemplate( 

@@ -54,5 +54,7 @@
 
 {{ Asset::scripts() }}
 
+@yield('scripts')
+
 </body>
 </html>

@@ -29,6 +29,29 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
     protected $dontValidate = false;
 
     /**
+     * This will determine if any of the concrete classes will ever be validated
+     *
+     * @var bool
+     */
+    protected static $neverValidate = false;
+
+    /**
+     * @return void
+     */
+    public static function turnOffValidations()
+    {
+        static::$neverValidate = true;
+    }
+
+    /**
+     * @return void
+     */
+    public static function turnOnValidations()
+    {
+        static::$neverValidate = false;
+    }
+
+    /**
      * We are giving all models the ability to clean it's attributes from XSS attack.
      *
      * @return void
@@ -64,6 +87,17 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
     public function dontValidate()
     {
         $this->dontValidate = true;
+    }
+
+    /**
+     * This method will check if the given attributes are valid or not..
+     * Remember that there is a validator object that holds the last validation.
+     *
+     * @return bool
+     */
+    public function isValid()
+    {
+        return $this->getValidator()->passes();
     }
 
     /**
@@ -150,18 +184,15 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      * This will validate the model and save it.
      *
      * @param array $attributes
-     * @return \Illuminate\Database\Eloquent\Model|null|static
+     * @return BaseModel
      */
     public static function create( array $attributes )
     {
         $model = new static($attributes);
 
-        if($model->save()) {
+        $model->save();
 
-            return $model;
-        }
-
-        return null;
+        return $model;
     }
 
     /**
@@ -175,7 +206,7 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
         $validation = true;
 
         // If this model is not told to not validate then validate it..
-        if(! $this->dontValidate) $validation = $this->validate();
+        if(! $this->dontValidate && ! static::$neverValidate) $validation = $this->validate();
 
         if($validation) {
 
@@ -201,4 +232,16 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      */
     public function beforeSave(){}
 
+    /**
+     * @param string $format
+     * @return string
+     */
+    public function getCreatedAt( $format = '' )
+    {
+        $created_at = $this->getAttribute('created_at');
+
+        if(! $format) return $created_at;
+
+        else return date($format, strtotime($created_at));
+    }
 }

@@ -7,6 +7,34 @@ use \Illuminate\Database\Query\Builder;
 class PostAlgorithm extends \BaseAlgorithm {
 
     /**
+     * @return $this
+     */
+    public function postState()
+    {
+        $this->getQuery()->where('state', Post::POST);
+
+        return $this;
+    }
+
+    /**
+     * @param Post $post
+     * @return $this
+     */
+    public function related( Post $post )
+    {
+        $this->getQuery()->where('id', '!=', $post->id)
+                        ->where(function(Builder $query) use ($post)
+                        {
+                            $query->where('title', 'like', '%' . $post->getTitle() . '%')
+                                ->orWhere('description', 'like', '%' . $post->getTitle() . '%')
+                                ->orWhere('tags', 'like', '%' . $post->getTags() . '%')
+                                ->orderBy('id', DB::raw('RAND()'));
+                        });
+
+        return $this;
+    }
+
+    /**
      * @param $year
      * @return $this
      */

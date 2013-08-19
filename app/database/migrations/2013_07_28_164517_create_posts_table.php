@@ -28,7 +28,7 @@ class CreatePostsTable extends Migration {
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
 
-            $table->integer('copy_of_id')->unsigned();
+            $table->integer('copy_of_id')->unsigned()->nullable();
             $table->foreign('copy_of_id')->references('id')->on('posts')->onDelete('CASCADE');
 
             $table->softDeletes();

@@ -21,6 +21,8 @@ class CreateImagesTable extends Migration {
 
             $table->boolean('accepted')->default(false);
 
+            $table->integer('order');
+
             $table->integer('imageable_id')->unsigned();
             $table->string('imageable_type');
 

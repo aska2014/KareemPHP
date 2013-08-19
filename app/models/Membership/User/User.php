@@ -7,8 +7,11 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Illuminate\Hashing\BcryptHasher;
 use NotAcceptedException;
+use Website\Subscribe\Subscribe;
 
 class User extends \BaseModel implements UserInterface, RemindableInterface, \AcceptableInterface {
+
+    use \Acceptable;
 
     /**
      * Users types
@@ -35,7 +38,7 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
     /**
      * @var array
      */
-    protected $guard = array('id', 'password', 'type');
+    protected $guarded = array('id', 'password', 'type');
 
     /**
      * Force validation of this model
@@ -50,11 +53,12 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
      * @var array
      */
     protected $rules = array(
-        'username' => 'required|min:6',
+        'username' => 'min:6',
         'email'    => 'required|email',
-        'password' => 'required|regex:((?=.*\d)(?=.*[a-z]).{8,20})',
+        'password' => 'regex:((?=.*\d)(?=.*[a-z]).{8,20})',
         'ip'       => 'required|ip',
-        'type'     => 'in:0,1,9,10'
+        'type'     => 'in:0,1,9,10',
+        'website'  => 'url'
     );
 
     /**
@@ -78,47 +82,45 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
     );
 
     /**
-     * Accept current object.
-     *
-     * @return void
+     * @param array $attributes
+     * @return User
      */
-    public function accept()
+    public static function createOrUpdate(array $attributes)
     {
-        $this->accepted = true;
+        if(array_key_exists('email', $attributes) && $user = static::getByEmail($attributes['email']))
+        {
+            $user->update($attributes);
 
-        $this->save();
-    }
-
-    /**
-     * Un accept current object.
-     *
-     * @return void
-     */
-    public function unAccept()
-    {
-        $this->accepted = false;
-
-        $this->save();
-    }
-
-    /**
-     * Throws an exception if not accepted
-     *
-     * @throws NotAcceptedException
-     * @return void
-     */
-    public function failIfNotAccepted()
-    {
-        if(! $this->accepted) {
-
-            throw new NotAcceptedException;
+            return $user;
         }
+
+        return static::create($attributes);
+    }
+
+    /**
+     * @param $email
+     * @return User
+     */
+    public static function getByEmail($email)
+    {
+        return static::where('email', $email)->first();
+    }
+
+    /**
+     * Get administrator user.
+     *
+     * @return User
+     */
+    public static function getBoss()
+    {
+        return static::where('type', self::ADMINISTRATOR)->first() ?:
+               static::where('type', self::DEVELOPER)->first();
     }
 
     /**
      * @return \Illuminate\Hashing\HasherInterface
      */
-    public function getHasher()
+    public static function getHasher()
     {
         return new BcryptHasher();
     }
@@ -214,6 +216,26 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
     }
 
     /**
+     * @param $name
+     */
+    public function setName( $name )
+    {
+        $parts = explode(" ", $name);
+
+        $this->first_name = $parts[0];
+
+        if(count($parts) > 1) $this->last_name = $parts[1];
+    }
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return ucfirst($this->first_name) . ' ' . ucfirst($this->last_name);
+    }
+
+    /**
      * Get the unique identifier for the user.
      *
      * @return mixed
@@ -249,7 +271,19 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
      */
     public function setProfileImage( Image $image )
     {
+        if($profileImage = $this->getProfileImage())
+
+            $image->override($profileImage);
+
         return $this->profileImage()->save($image);
+    }
+
+    /**
+     * @return Image
+     */
+    public function getProfileImage()
+    {
+        return $this->profileImage;
     }
 
     /**
@@ -258,6 +292,17 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
     public function profileImage()
     {
         return $this->morphOne('Gallery\Image\Image', 'imageable');
+    }
+
+    /**
+     * @param array $attributes
+     * @return \Illuminate\Database\Eloquent\Model|mixed
+     */
+    public function attachSubscribe( array $attributes )
+    {
+        $this->subscribe()->delete();
+
+        return $this->subscribe()->create($attributes);
     }
 
     /**
@@ -282,5 +327,37 @@ class User extends \BaseModel implements UserInterface, RemindableInterface, \Ac
     public function rates()
     {
         return $this->hasMany('Blog\Rate\Rate');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function galleries()
+    {
+        return $this->hasMany('Gallery\Gallery\Gallery');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function comments()
+    {
+        return $this->hasMany('Blog\Comment\Comment');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function subscribe()
+    {
+        return $this->hasOne('Website\Subscribe\Subscribe');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function contacts()
+    {
+        return $this->hasMany('Website\ContactUs\ContactUs');
     }
 }

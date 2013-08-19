@@ -49,6 +49,37 @@ class ImageSystemSeeder extends \Illuminate\Database\Seeder {
         /////////////////////////////////////////
 
 
+
+
+
+        // Service Main Images Configurations....
+        $serviceMain = Group::create(array('name' => 'Service.Main'));
+
+        $serviceSpecs = $serviceMain->specs()->create(array(
+            'uri' => 'services/service{service}.jpg'
+        ));
+        $serviceSpecs->operations()->create(array(
+            'method' => 'crop',
+            'args'   => '250,155',
+            'type'   => $interventionType
+        ));
+
+
+
+        // Service Gallery Images Configurations
+        $serviceGallery = Group::create(array('name' => 'Service.Gallery'));
+
+        $serviceSpecs = $serviceGallery->specs()->create(array(
+            'uri' => 'services/service{service}-{image}.jpg'
+        ));
+        $serviceSpecs->operations()->create(array(
+            'method' => 'crop',
+            'args'   => '250,155',
+            'type'   => $interventionType
+        ));
+
+
+
         $this->command->info("Image System seeded successfully");
     }
 

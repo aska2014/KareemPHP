@@ -1,8 +1,29 @@
 <?php
 
+use Blog\Demo\Demo;
+use Blog\Download\Download;
 use Blog\Post\Post;
+use website\Service\Service;
 
 class EasyURL extends URL {
+
+    /**
+     * @param Service $service
+     * @return string
+     */
+    public static function service( Service $service )
+    {
+        return static::route('service', $service->id);
+    }
+
+    /**
+     * @param Download $download
+     * @return string
+     */
+    public static function download( Download $download )
+    {
+        return static::route('download', $download->id);
+    }
 
     /**
      * @param Post $post

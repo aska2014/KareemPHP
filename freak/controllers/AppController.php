@@ -24,4 +24,11 @@ class AppController extends Controller {
 			
 			$alert->seen($model->created_at);
 	}
+
+    protected function finishedUploading()
+    {
+        return '<script language="javascript" type="text/javascript">
+					window.top.window.ControlUnit.prototype.uploadFinished( {message: "success"} );
+				</script>';
+    }
 }

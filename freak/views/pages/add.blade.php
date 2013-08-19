@@ -10,6 +10,7 @@
             
             <form action="{{ URL::action('PageController@store') }}" method="POST" enctype="multipart/form-data" id="mainForm">
 
+
                 <div class="control-group">
                     <label class="control-label" for="Title">Parent page</label>
                     <div class="controls">

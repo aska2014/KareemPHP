@@ -4,7 +4,6 @@
 var timer_interval;
 $(document).ready(function(){
 
-
 	// Make content height
 	if($("#content").height() < $("#right_panel").height())
 		$("#content").height($("#right_panel").height());
@@ -21,9 +20,6 @@ $(document).ready(function(){
 	    		$("#scrollTop").animate({opacity:0});
     	}
     });
-
-	//Track links
-	trackLink();
 
 	//Scroll
 	makeAScroll();
@@ -66,98 +62,18 @@ $(document).ready(function(){
 		$(this).animate({
 			width:130
 		});
-	})
-
-	////////////// Comment form
-
-	$("#commentForm").submit(function()
-	{
-		var name = $("#comment_name").val();
-		var body = $("#comment_body").val();
-		var email = $("#comment_email").val();
-
-		if($("#comment_img").length > 0)
-			var img_url = $("#comment_img").val();
-		else
-			var img_url = '';
-
-		if($("#reply_id").length > 0)
-			var reply_id = String($("#reply_id").val());
-		else
-			var reply_id = "";
-
-		var stringReg = new RegExp(/^[a-zA-Z ]*$/i);
-		var emailReg = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
-
-		if(body == '' || name == '')
-		{
-			$("#comment_error").html('Please make sure you entered your name and the comment body');
-			return false;
-		}
-
-		if(name.length > 30 || (!emailReg.test(email) && email != ''))
-		{
-			$("#comment_error").html('Please make sure you entered a valid name and/or valid email address');
-			return false;
-		}
-
-
-		$("#commentForm").fadeTo(200,'0.2');
-		$("#commentForm > .sbmt").attr('disabled','disabled');
-		$.ajax({
-			cache:false,
-			url:'',
-			type: 'POST',
-			data: {
-				smsma:"addComment",
-				comment_name:name,
-				comment_email:email,
-				comment_body:body,
-				reply_id:reply_id,
-				img_url:img_url
-			},
-			success:function(d)
-			{
-				if(d.indexOf('true') < 0)
-				{
-					$("#comment_error").html(d);
-				}
-				else
-				{
-					var img_tag = '<img src="' +  base_url + '/public/style/images/default_member.png" />';
-					if(img_url != '')
-						img_tag = '<img src="' + img_url + '" />';
-					$("#comment_error").html('');
-					$("#comments").append('<div style="display:none;" class="comment">' + img_tag + '<div class="comment_info"><div class="name"><span>' + name + '</span> says:</div><span class="datetime">' + sqlNow + '</span><div class="c_body">' + body + '</div></div><div class="clr"></div></div>');
-					$(".comment").slideDown('fast');
-					$("#comment_email").val('');
-					$("#comment_body").val('');
-				}
-				$("#commentForm").fadeTo(500,'1');
-				$("#commentForm > .sbmt").removeAttr('disabled');
-			},
-			error:function()
-			{
-				$("#comment_error").html('Something wrong with the AJAX request, please try again');
-				$("#commentForm").fadeTo(500,'1');
-			}
-		});
-		return false;
 	});
 
-	$(".comment").hover(
-		function()
-		{
-			var reply_id = $(this).attr('id').replace('comment','');
-			$(this).find('.grey').html('<a class="scroll" href="#addCommentTitle" onclick="replyComment(' + reply_id + ');">Reply</a>');
-			makeAScroll();
-		},
-		function()
-		{
-			$(this).find('.grey').html('');
-		}
-	);
+
+    makeCloseable();
 });
+
+function makeCloseable()
+{
+    $(".close").on("click", function(){
+        $(this).parent().hide('slow');
+    });
+}
 
 
 function timer()
@@ -235,21 +151,6 @@ function setCookie(name, value, seconds, path, domain_name, secure)
 	document.cookie = data;
 }
 
-function replyComment(commentID)
-{
-	var commentName = $("#comment" + commentID + " > .comment_info > .name > span").html();
-	if($("#reply_row").length > 0)
-	{
-		$("#reply_row > span").html('Replay to ' + commentName);
-		$("#reply_id").val(commentID);
-	}
-	else
-	{
-		$("#commentForm").prepend('<div class="c_row" id="reply_row"><span style="color:#666">Reply to ' + commentName + '</span></div>');
-		$("#commentForm").append('<input type="hidden" name="reply_id" id="reply_id" value = "' + commentID + '" />');
-	}
-}
-
 
 // Any <a> tag with class scroll will be scrolled to if #id
 function makeAScroll()
@@ -298,13 +199,3 @@ function removeSlow(element, time)
 	$(".notification").delay(time).animate({height:0});
 }
 ///////////////////////////////////////////
-
-// Tracking links , called from document ready
-function trackLink()
-{
-	$("a").click(function()
-	{
-		setCookie('link_ref_id',$(this).attr('id'),10, '/');
-	});
-}
-//////////////////////////////////////////////

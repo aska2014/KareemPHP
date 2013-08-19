@@ -2,8 +2,10 @@
 
 use Blog\Post\Post;
 
-class Page extends \BaseModel {
+class Page extends \BaseModel implements \OrderedInterface {
 	protected $connection = 'server';
+    use \Ordered;
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -54,6 +56,30 @@ class Page extends \BaseModel {
         'body' => 'text',
         'post_id' => 'factory|Blog\Post\Post'
     );
+
+    /**
+     * @return string
+     */
+    public function getBody()
+    {
+        return $this->body;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReadyBody()
+    {
+        return html_entity_decode($this->getBody());
+    }
+
+    /**
+     * @return Builder
+     */
+    public function getOrderGroup()
+    {
+        return $this->query()->where('post_id', $this->post_id);
+    }
 
     /**
      * @param Post $post

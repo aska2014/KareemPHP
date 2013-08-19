@@ -5,7 +5,7 @@
         <li style="margin-bottom:20px;"><a href="{{ EasyURL::blogArchive($year) }}">{{ $year }} ({{ $year->getCount() }})</a><div class="arrow_img"></div>
             @foreach($year->getMonths() as $month)
             <ul class="month">
-                <li><a href="{{ EasyURL::blogArchive($year, $month) }}">{{ $month->format('M') }} ({{ $month->getCount() }})</a></li>
+                <li><a href="{{ EasyURL::blogArchive($year, $month) }}">{{ $month->format('F') }} ({{ $month->getCount() }})</a></li>
             </ul>
             @endforeach
         </li>

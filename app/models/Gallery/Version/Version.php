@@ -48,9 +48,9 @@ class Version extends \BaseModel {
      * @var array
      */
     public static $factory = array(
-        'image_id' => 'factory|Gallery\Image\Image',
-        'url'      => 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/187793_431846433497472_1192504853_q.jpg',
+        'url'      => 'http://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash4/187793_431846433497472_1192504853_q.jpg',
         'width'    => 50,
+        'image_id' => 'factory|Gallery\Image\Image',
         'height'   => 50
     );
 
@@ -59,7 +59,7 @@ class Version extends \BaseModel {
      */
     public function getUrl()
     {
-
+        return $this->url;
     }
 
     /**
@@ -89,4 +89,11 @@ class Version extends \BaseModel {
         return $this->belongsTo( 'Gallery\Image\Image' );
     }
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->url;
+    }
 }

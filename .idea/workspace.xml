@@ -2,76 +2,148 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a830654a-c891-4526-85f3-05a823b25cfc" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_08_01_202926_create_place_table.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/controllers/PageController.php" afterPath="$PROJECT_DIR$/freak/controllers/PageController.php" />
+      <change type="DELETED" beforePath="D:\Projects\KareemPHP\www\app\tests\Models\Gallery\ImageManagerTest.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164507_create_users_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164507_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164517_create_posts_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164517_create_posts_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164528_create_postpages_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164528_create_postpages_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164547_create_comments_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_28_164547_create_comments_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2013_07_30_112023_create_images_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_07_30_112023_create_images_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/controllers/AppController.php" afterPath="$PROJECT_DIR$/freak/controllers/AppController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Archive/Archive.php" afterPath="$PROJECT_DIR$/app/models/Blog/Archive/Archive.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Archive/Archive.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Archive/Archive.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/BaseAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/BaseAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/BaseAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/BaseAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/BaseController.php" afterPath="$PROJECT_DIR$/app/controllers/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/BaseModel.php" afterPath="$PROJECT_DIR$/app/models/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/BaseModel.php" afterPath="$PROJECT_DIR$/freak/copies/models/BaseModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Comment/Comment.php" afterPath="$PROJECT_DIR$/app/models/Blog/Comment/Comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Comment/Comment.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Comment/Comment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Comment/CommentAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/Blog/Comment/CommentAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Comment/CommentAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Comment/CommentAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libraries/EasyRoute.php" afterPath="$PROJECT_DIR$/app/libraries/EasyRoute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/libraries/EasyRoute.php" afterPath="$PROJECT_DIR$/freak/copies/libraries/EasyRoute.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libraries/EasyURL.php" afterPath="$PROJECT_DIR$/app/libraries/EasyURL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/libraries/EasyURL.php" afterPath="$PROJECT_DIR$/freak/copies/libraries/EasyURL.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/commands/FreakModelCommand.php" afterPath="$PROJECT_DIR$/app/commands/FreakModelCommand.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/Group/Group.php" afterPath="$PROJECT_DIR$/app/models/Gallery/Group/Group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/Group/Group.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/Group/Group.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/Group/GroupAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/Gallery/Group/GroupAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/Group/GroupAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/Group/GroupAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpec.php" afterPath="$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/GroupSpec/GroupSpec.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/GroupSpec/GroupSpec.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/controllers/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/Image/Image.php" afterPath="$PROJECT_DIR$/app/models/Gallery/Image/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/Image/Image.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/Image/Image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/ImageManager.php" afterPath="$PROJECT_DIR$/app/models/Gallery/ImageManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/ImageManager.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/ImageManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/ImageSystemSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/ImageSystemSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/Models/Gallery/ImageTest.php" afterPath="$PROJECT_DIR$/app/tests/Models/Gallery/ImageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Archive/Month.php" afterPath="$PROJECT_DIR$/app/models/Blog/Archive/Month.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Archive/Month.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Archive/Month.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/core/Operation/Operation.php" afterPath="$PROJECT_DIR$/app/models/core/Operation/Operation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/core/Operation/Operation.php" afterPath="$PROJECT_DIR$/freak/copies/models/core/Operation/Operation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Page/Page.php" afterPath="$PROJECT_DIR$/app/models/Blog/Page/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Website/Page/Page.php" afterPath="$PROJECT_DIR$/app/models/Website/Page/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Page/Page.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Page/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Website/Page/Page.php" afterPath="$PROJECT_DIR$/freak/copies/models/Website/Page/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Page/PageAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/Blog/Page/PageAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Page/PageAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Page/PageAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/PolymorphicInterface.php" afterPath="$PROJECT_DIR$/app/models/PolymorphicInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/PolymorphicInterface.php" afterPath="$PROJECT_DIR$/freak/copies/models/PolymorphicInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Post/Post.php" afterPath="$PROJECT_DIR$/app/models/Blog/Post/Post.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Post/Post.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Post/Post.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Blog/Post/PostAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/Blog/Post/PostAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Blog/Post/PostAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/Blog/Post/PostAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/Models/Blog/PostTest.php" afterPath="$PROJECT_DIR$/app/tests/Models/Blog/PostTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PostsController.php" afterPath="$PROJECT_DIR$/app/controllers/PostsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Membership/User/User.php" afterPath="$PROJECT_DIR$/app/models/Membership/User/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Membership/User/User.php" afterPath="$PROJECT_DIR$/freak/copies/models/Membership/User/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/seeds/UserTableSeeder.php" afterPath="$PROJECT_DIR$/app/database/seeds/UserTableSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tests/Models/Membership/UserTest.php" afterPath="$PROJECT_DIR$/app/tests/Models/Membership/UserTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/Version/Version.php" afterPath="$PROJECT_DIR$/app/models/Gallery/Version/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/Version/Version.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/Version/Version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Gallery/Version/VersionAlgorithm.php" afterPath="$PROJECT_DIR$/app/models/Gallery/Version/VersionAlgorithm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/copies/models/Gallery/Version/VersionAlgorithm.php" afterPath="$PROJECT_DIR$/freak/copies/models/Gallery/Version/VersionAlgorithm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/add.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/artisan.php" afterPath="$PROJECT_DIR$/app/start/artisan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/data.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/data.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/views/pages/detail.blade.php" afterPath="$PROJECT_DIR$/freak/views/pages/detail.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rightpanel/archive.blade.php" afterPath="$PROJECT_DIR$/app/views/rightpanel/archive.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/start/before.php" afterPath="$PROJECT_DIR$/freak/start/before.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/composers.php" afterPath="$PROJECT_DIR$/app/composers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/my_assets/js/global.js" afterPath="$PROJECT_DIR$/public/my_assets/js/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/start/global.php" afterPath="$PROJECT_DIR$/app/start/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout1/header.blade.php" afterPath="$PROJECT_DIR$/app/views/layout1/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.blade.php" afterPath="$PROJECT_DIR$/app/views/home/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout1/index.blade.php" afterPath="$PROJECT_DIR$/app/views/layout1/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/kareem.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/kareem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/freak/models/pages.php" afterPath="$PROJECT_DIR$/freak/models/pages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php" afterPath="$PROJECT_DIR$/app/views/emails/auth/reminder.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/pages/start.php" afterPath="$PROJECT_DIR$/app/assets/pages/start.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/my_assets/css/style.css" afterPath="$PROJECT_DIR$/public/my_assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rightpanel/subscribe.blade.php" afterPath="$PROJECT_DIR$/app/views/rightpanel/subscribe.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Projects\KareemPHP\www\app\database\migrations\2013_08_01_202930_create_page_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2013_08_01_202920_create_page_table.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394150817" ignored="false" />
+    <file path="/Dummy.txt" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376910620335" ignored="false" />
     <file path="/Helper.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375219337809" ignored="false" />
     <file path="/OperationTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280373978" ignored="false" />
     <file path="/2013_07_30_193040_create_upload_operations_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303123610" ignored="false" />
-    <file path="/Operation.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302973459" ignored="false" />
+    <file path="/Operation.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376858198445" ignored="false" />
     <file path="/2013_07_30_193019_create_image_groups_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305912369" ignored="false" />
     <file path="/2013_07_30_193032_create_group_configs_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375274989262" ignored="false" />
     <file path="/GroupConfigTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280544593" ignored="false" />
     <file path="/GroupConfig.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375280269922" ignored="false" />
     <file path="/ImageGroup.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375290888098" ignored="false" />
-    <file path="/ImageTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375278498359" ignored="false" />
+    <file path="/ImageTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375566857534" ignored="false" />
     <file path="/ImageGroupTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375290959173" ignored="false" />
-    <file path="/ImageManager.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291025180" ignored="false" />
-    <file path="/ImageManagerTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375291441747" ignored="false" />
+    <file path="/ImageManager.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375531038961" ignored="false" />
+    <file path="/ImageManagerTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375472621642" ignored="false" />
     <file path="/Path.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375285109291" ignored="false" />
-    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395881740" ignored="false" />
-    <file path="/GroupSpec.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303038810" ignored="false" />
+    <file path="/a.dummy" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376092132375" ignored="false" />
+    <file path="/GroupSpec.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376089187437" ignored="false" />
     <file path="/GroupSpecAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302691690" ignored="false" />
-    <file path="/Group.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375302901307" ignored="false" />
+    <file path="/Group.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376088630532" ignored="false" />
     <file path="/GroupSpecTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303268420" ignored="false" />
     <file path="/GroupTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375303315791" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375304518986" ignored="false" />
     <file path="/2013_07_30_193032_create_image_group_specs_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305813191" ignored="false" />
     <file path="/DatabaseSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375305944439" ignored="false" />
-    <file path="/ImageSystemSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375307246988" ignored="false" />
-    <file path="/UserTableSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375307214563" ignored="false" />
+    <file path="/ImageSystemSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375489758003" ignored="false" />
+    <file path="/UserTableSeeder.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375402138825" ignored="false" />
     <file path="/HomeControllerTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375314573254" ignored="false" />
     <file path="/ArchiveTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375310204161" ignored="false" />
-    <file path="/BaseAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365592496" ignored="false" />
-    <file path="/Archive.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375368411746" ignored="false" />
+    <file path="/BaseAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376830671385" ignored="false" />
+    <file path="/Archive.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376138501830" ignored="false" />
     <file path="/phpunit.xml" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375392480060" ignored="false" />
-    <file path="/routes.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375368019761" ignored="false" />
-    <file path="/global.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375311930874" ignored="false" />
-    <file path="/HomeController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375368283145" ignored="false" />
-    <file path="/PostAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365542608" ignored="false" />
-    <file path="/composers.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375368344728" ignored="false" />
+    <file path="/routes.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376825616387" ignored="false" />
+    <file path="/global.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375997341501" ignored="false" />
+    <file path="/HomeController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376057081826" ignored="false" />
+    <file path="/PostAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375996328412" ignored="false" />
+    <file path="/composers.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376830634761" ignored="false" />
     <file path="/TestCase.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375314175714" ignored="false" />
-    <file path="/EasyRoute.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375315211732" ignored="false" />
-    <file path="/index.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365836986" ignored="false" />
-    <file path="/header.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375359617140" ignored="false" />
+    <file path="/EasyRoute.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376136531073" ignored="false" />
+    <file path="/index.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376826831689" ignored="false" />
+    <file path="/header.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376136391015" ignored="false" />
     <file path="/modal.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375360065061" ignored="false" />
     <file path="/modal.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375360100851" ignored="false" />
     <file path="/end.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375360145002" ignored="false" />
     <file path="/rightpanel.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375360568233" ignored="false" />
-    <file path="/Post.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375363509983" ignored="false" />
-    <file path="/Version.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375363461737" ignored="false" />
-    <file path="/EasyURL.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375368389275" ignored="false" />
-    <file path="/PostsController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375364452662" ignored="false" />
+    <file path="/Post.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376050991422" ignored="false" />
+    <file path="/Version.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375492768893" ignored="false" />
+    <file path="/EasyURL.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376056423007" ignored="false" />
+    <file path="/PostsController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376047557704" ignored="false" />
     <file path="/home.html" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375364646174" ignored="false" />
-    <file path="/BaseController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365112254" ignored="false" />
+    <file path="/BaseController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376090163708" ignored="false" />
     <file path="/start.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375365877540" ignored="false" />
     <file path="/Asset.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375366188272" ignored="false" />
     <file path="/popular.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375366522040" ignored="false" />
-    <file path="/archive.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375367919979" ignored="false" />
+    <file path="/archive.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376057171432" ignored="false" />
     <file path="/Item.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375367138349" ignored="false" />
     <file path="/Year.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375367770692" ignored="false" />
-    <file path="/Month.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375367346201" ignored="false" />
-    <file path="/style.css" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375372863864" ignored="false" />
+    <file path="/Month.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375627186738" ignored="false" />
+    <file path="/style.css" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376830334304" ignored="false" />
     <file path="D:/website/blank_freak/registers/kareemphp/models/content.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375373691683" ignored="false" />
     <file path="D:/website/blank_freak/registers/kareemphp/models/pages.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375373714941" ignored="false" />
     <file path="D:/website/blank_freak/app/database/migrations/2013_08_01_161837_add_host_registers_path.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375373978181" ignored="false" />
@@ -79,18 +151,97 @@
     <file path="/Content.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375389178197" ignored="false" />
     <file path="/2013_08_01_202926_create_place_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375389461290" ignored="false" />
     <file path="/Place.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375390410342" ignored="false" />
-    <file path="/Page.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375391689442" ignored="false" />
+    <file path="/Page.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376749165780" ignored="false" />
     <file path="/PageTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375392813838" ignored="false" />
     <file path="/ContentTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375393402285" ignored="false" />
     <file path="/PlaceTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375393519142" ignored="false" />
     <file path="/2013_08_01_220048_create_places_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394691772" ignored="false" />
-    <file path="/PageController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375394967797" ignored="false" />
-    <file path="/data.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395227735" ignored="false" />
-    <file path="/detail.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395306144" ignored="false" />
-    <file path="/add.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395510428" ignored="false" />
+    <file path="/PageController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376092292459" ignored="false" />
+    <file path="/data.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376835704803" ignored="false" />
+    <file path="/detail.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375436464469" ignored="false" />
+    <file path="/add.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376856928138" ignored="false" />
     <file path="/artisan.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395985652" ignored="false" />
     <file path="/FreakModelCommand.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395888622" ignored="false" />
     <file path="/FreakModelDeleteCommand.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375395892992" ignored="false" />
+    <file path="/PostController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376139380583" ignored="false" />
+    <file path="/User.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376066716692" ignored="false" />
+    <file path="/2013_07_28_164517_create_posts_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375402519887" ignored="false" />
+    <file path="/PostPageController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376749092781" ignored="false" />
+    <file path="/controller.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375435372457" ignored="false" />
+    <file path="/BaseModel.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375916769685" ignored="false" />
+    <file path="/views_data.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375441818330" ignored="false" />
+    <file path="/pages.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375442415393" ignored="false" />
+    <file path="/postPage.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375442443790" ignored="false" />
+    <file path="/2013_07_28_164528_create_postpages_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375529129535" ignored="false" />
+    <file path="/CommentController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375992367396" ignored="false" />
+    <file path="/comment.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375443830981" ignored="false" />
+    <file path="/CommentAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375992212318" ignored="false" />
+    <file path="/2013_08_02_120214_create_services_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375444990006" ignored="false" />
+    <file path="/Service.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375579818811" ignored="false" />
+    <file path="/ServiceController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580502402" ignored="false" />
+    <file path="/2013_07_30_112023_create_images_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375450154173" ignored="false" />
+    <file path="/Image.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375626918522" ignored="false" />
+    <file path="/OrderableInterface.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375464605576" ignored="false" />
+    <file path="/OrderedInterface.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375461177422" ignored="false" />
+    <file path="/Acceptable.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375523736047" ignored="false" />
+    <file path="/Comment.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375995691769" ignored="false" />
+    <file path="/before.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375576840480" ignored="false" />
+    <file path="/ImageFacade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580370917" ignored="false" />
+    <file path="/ImageFacadeTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375536979393" ignored="false" />
+    <file path="/Ordered.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375632919351" ignored="false" />
+    <file path="/VersionAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375626838776" ignored="false" />
+    <file path="/gallery.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580989590" ignored="false" />
+    <file path="/AppController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375523842432" ignored="false" />
+    <file path="/PolymorphicInterface.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375524427444" ignored="false" />
+    <file path="/bindings.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375534860654" ignored="false" />
+    <file path="/GroupAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375530677328" ignored="false" />
+    <file path="/PostTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375566680088" ignored="false" />
+    <file path="/SameOrderException.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375542033580" ignored="false" />
+    <file path="/dummy.txt" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375562744726" ignored="false" />
+    <file path="/2013_08_03_205511_create_galleries_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375565944689" ignored="false" />
+    <file path="/Gallery.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376089915744" ignored="false" />
+    <file path="/UserTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375566954266" ignored="false" />
+    <file path="/GalleryTest.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375567117425" ignored="false" />
+    <file path="/GalleryAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375567194007" ignored="false" />
+    <file path="$PROJECT_DIR$/freak/copies/models/Ordered.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580828410" ignored="false" />
+    <file path="$PROJECT_DIR$/freak/copies/models/OrderedInterface.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580828410" ignored="false" />
+    <file path="$PROJECT_DIR$/freak/copies/models/Website/Place/Place.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580828410" ignored="false" />
+    <file path="$PROJECT_DIR$/freak/copies/models/Blog/Rate/Rate.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580828411" ignored="false" />
+    <file path="$PROJECT_DIR$/freak/copies/models/Website/Content/Content.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375580828411" ignored="false" />
+    <file path="/one.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376749135476" ignored="false" />
+    <file path="/2013_08_04_130215_create_downloads_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375622895325" ignored="false" />
+    <file path="/2013_08_04_130209_create_demos_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375622881147" ignored="false" />
+    <file path="/Demo.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376056483391" ignored="false" />
+    <file path="/Download.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376055425224" ignored="false" />
+    <file path="/related.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375623820866" ignored="false" />
+    <file path="/DownloadsController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376055381313" ignored="false" />
+    <file path="/ServicesController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375632080313" ignored="false" />
+    <file path="/ContactUsController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376066859246" ignored="false" />
+    <file path="/2013_08_04_140055_create_contact_us_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375625359600" ignored="false" />
+    <file path="/ContactUs.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376066682646" ignored="false" />
+    <file path="/all.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376087674451" ignored="false" />
+    <file path="/AboutController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375632437237" ignored="false" />
+    <file path="/OrderedCollection.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375634575080" ignored="false" />
+    <file path="/form.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376090209447" ignored="false" />
+    <file path="/2013_07_28_164547_create_comments_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375916051872" ignored="false" />
+    <file path="/2013_07_28_164507_create_users_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376066391589" ignored="false" />
+    <file path="/global.js" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376087418053" ignored="false" />
+    <file path="/GeneralException.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1375997284003" ignored="false" />
+    <file path="/PageAlgorithm.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376047637340" ignored="false" />
+    <file path="/subscribe.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376065153210" ignored="false" />
+    <file path="/Subscribe.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376058052850" ignored="false" />
+    <file path="/2013_08_09_141421_create_subscribers_table.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376057779305" ignored="false" />
+    <file path="/Subscriber.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376057938879" ignored="false" />
+    <file path="/layout1.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376062555798" ignored="false" />
+    <file path="/layout2.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376062682388" ignored="false" />
+    <file path="/style_2.css" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376064187547" ignored="false" />
+    <file path="/SubscribeController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376086821672" ignored="false" />
+    <file path="/messages.blade.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376087243835" ignored="false" />
+    <file path="/slider.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376087965186" ignored="false" />
+    <file path="/PagesController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376092995933" ignored="false" />
+    <file path="/highlight.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376732788439" ignored="false" />
+    <file path="/shCoreDefault.css" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376830273940" ignored="false" />
+    <file path="/ImageSpecsController.php" changelist="a830654a-c891-4526-85f3-05a823b25cfc" time="1376858248151" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +265,174 @@
     <favorites_list name="www" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="DATABASE/a7050746-3cb9-4e02-9c9b-70087d050ccf" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://DATABASE/a7050746-3cb9-4e02-9c9b-70087d050ccf">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>a7050746-3cb9-4e02-9c9b-70087d050ccf</OriginalElement>
+              <nodes>
+                <node x="594.0" y="409.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.galleries</node>
+                <node x="107.5" y="1141.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places</node>
+                <node x="1406.0" y="399.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments</node>
+                <node x="822.0" y="419.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.histories</node>
+                <node x="386.0" y="419.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.rates</node>
+                <node x="0.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.downloads</node>
+                <node x="0.0" y="932.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contents</node>
+                <node x="421.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.k_posts</node>
+                <node x="1674.0" y="698.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.versions</node>
+                <node x="205.0" y="708.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.postpages</node>
+                <node x="233.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.demos</node>
+                <node x="1030.0" y="429.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contact_us</node>
+                <node x="892.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.migrations</node>
+                <node x="58.0" y="359.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts</node>
+                <node x="862.0" y="1071.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_group_specs</node>
+                <node x="699.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.services</node>
+                <node x="466.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.hack_attempts</node>
+                <node x="1654.0" y="399.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images</node>
+                <node x="1063.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.operations</node>
+                <node x="1218.0" y="439.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.subscribes</node>
+                <node x="188.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages</node>
+                <node x="876.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_groups</node>
+                <node x="861.0" y="0.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_group_specs" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_groups">
+                  <point x="0.0" y="-64.5" />
+                  <point x="0.0" y="54.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-144.5" />
+                  <point x="212.0" y="309.0" />
+                  <point x="880.25" y="309.0" />
+                  <point x="-134.75" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments">
+                  <point x="0.0" y="104.5" />
+                  <point x="1520.0" y="628.0" />
+                  <point x="1386.0" y="628.0" />
+                  <point x="1386.0" y="503.5" />
+                  <point x="-114.0" y="-0.0" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages">
+                  <point x="-47.0" y="84.5" />
+                  <point x="235.0" y="1101.0" />
+                  <point x="168.0" y="1101.0" />
+                  <point x="168.0" y="996.5" />
+                  <point x="-94.0" y="-0.0" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contents">
+                  <point x="-47.0" y="-84.5" />
+                  <point x="154.5" y="1121.0" />
+                  <point x="74.0" y="1121.0" />
+                  <point x="0.0" y="64.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-104.5" />
+                  <point x="1768.0" y="309.0" />
+                  <point x="1149.75" y="309.0" />
+                  <point x="134.75" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages">
+                  <point x="47.0" y="-84.5" />
+                  <point x="248.5" y="1121.0" />
+                  <point x="329.0" y="1121.0" />
+                  <point x="47.0" y="84.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-104.5" />
+                  <point x="1520.0" y="319.0" />
+                  <point x="1111.25" y="319.0" />
+                  <point x="96.25" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contact_us" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-74.5" />
+                  <point x="1114.0" y="339.0" />
+                  <point x="1034.25" y="339.0" />
+                  <point x="19.25" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.rates" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-84.5" />
+                  <point x="480.0" y="319.0" />
+                  <point x="918.75" y="319.0" />
+                  <point x="-96.25" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.histories" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-84.5" />
+                  <point x="916.0" y="339.0" />
+                  <point x="995.75" y="339.0" />
+                  <point x="-19.25" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.subscribes" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-64.5" />
+                  <point x="1292.0" y="329.0" />
+                  <point x="1072.75" y="329.0" />
+                  <point x="57.75" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.postpages" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts">
+                  <point x="0.0" y="-74.5" />
+                  <point x="77.0" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.galleries" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+                  <point x="0.0" y="-94.5" />
+                  <point x="698.0" y="329.0" />
+                  <point x="957.25" y="329.0" />
+                  <point x="-57.75" y="144.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.versions" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images">
+                  <point x="0.0" y="-84.5" />
+                  <point x="0.0" y="104.5" />
+                </edge>
+                <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts">
+                  <point x="-77.0" y="144.5" />
+                  <point x="135.0" y="668.0" />
+                  <point x="38.0" y="668.0" />
+                  <point x="38.0" y="503.5" />
+                  <point x="-154.0" y="-0.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.25236593059936907" x="941.0" y="762.0" />
+              <SelectedNodes>
+                <node>a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Columns</Category>
+                <Category>Key columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freak/views/imagespecs/add.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="87" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageSpecsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/freak/controllers/ImageSpecsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="125" column="0" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="one.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/services/one.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.16221374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -132,22 +450,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/app/models/Website/Page/Page.php" />
-        <option value="$PROJECT_DIR$/app/tests/Models/Website/PageTest.php" />
-        <option value="$PROJECT_DIR$/app/tests/Models/Website/ContentTest.php" />
-        <option value="$PROJECT_DIR$/app/tests/Models/Website/PlaceTest.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202918_create_content_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_202926_create_place_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2013_08_01_220048_create_places_table.php" />
-        <option value="$PROJECT_DIR$/freak/views/pages/detail.blade.php" />
-        <option value="$PROJECT_DIR$/freak/views/pages/add.blade.php" />
-        <option value="$PROJECT_DIR$/freak/controllers/PageController.php" />
-        <option value="$PROJECT_DIR$/freak/views/pages/data.blade.php" />
-        <option value="$PROJECT_DIR$/app/commands/ModelCommand.php" />
-        <option value="$PROJECT_DIR$/app/start/artisan.php" />
-        <option value="$PROJECT_DIR$/app/commands/FreakModelDeleteCommand.php" />
-        <option value="$PROJECT_DIR$/app/commands/FreakModelCommand.php" />
+        <option value="$PROJECT_DIR$/app/assets/plugins/syntax.php" />
+        <option value="$PROJECT_DIR$/freak/views/postpages/add.blade.php" />
+        <option value="$PROJECT_DIR$/freak/controllers/PostPageController.php" />
+        <option value="$PROJECT_DIR$/app/views/posts/one.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/Blog/Page/Page.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/views/home/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/my_assets/css/style.css" />
+        <option value="$PROJECT_DIR$/public/plugins/syntax/styles/shCoreDefault.css" />
+        <option value="$PROJECT_DIR$/app/composers.php" />
+        <option value="$PROJECT_DIR$/app/models/BaseAlgorithm.php" />
+        <option value="$PROJECT_DIR$/freak/views/imagespecs/data.blade.php" />
+        <option value="$PROJECT_DIR$/freak/views/imagespecs/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/core/Operation/Operation.php" />
+        <option value="$PROJECT_DIR$/freak/controllers/ImageSpecsController.php" />
       </list>
     </option>
   </component>
@@ -184,6 +502,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -212,6 +531,82 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imagespecs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freak" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -230,7 +625,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="start" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,26 +643,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="Configurable.PHP" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="D:/website/blank_freak" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="PHP Script.Place.php">
     <configuration default="false" name="Place.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/app/models/Website/Place/Place.php">
@@ -342,19 +740,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32767403" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19242424" sideWeight="0.6706282" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15227273" sideWeight="0.6706282" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36439395" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23863636" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -363,6 +761,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -423,117 +822,225 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_30_193040_create_upload_operations_table.php">
+    <entry file="file://$PROJECT_DIR$/app/composers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="16" selection-start="1254" selection-end="1254" vertical-scroll-proportion="0.27099237" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_07_28_164606_create_rates_table.php">
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_220048_create_places_table.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="220" selection-end="220" vertical-scroll-proportion="0.2718808">
-          <folding />
-        </state>
+        <state line="45" column="20" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.6755725" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202918_create_content_table.php">
+    <entry file="file://$PROJECT_DIR$/app/commands/createModelsCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="320" selection-end="320" vertical-scroll-proportion="0.30353817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2013_08_01_202920_create_page_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.39851025">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/controllers/ContentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="5" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.57824427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Blog/Page/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="55" selection-end="55" vertical-scroll-proportion="-0.74115455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Website/Page/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="6" selection-start="945" selection-end="945" vertical-scroll-proportion="0.33519554">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/views/pages/detail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="925" selection-end="925" vertical-scroll-proportion="0.45419848">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/views/contents/data.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="25" selection-start="2320" selection-end="2320" vertical-scroll-proportion="1.5839695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/views/pages/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.7461832">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/views/pages/data.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="894" selection-end="894" vertical-scroll-proportion="0.45038167">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freak/controllers/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="44" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5458015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/artisan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="558" selection-end="558" vertical-scroll-proportion="0.25325885">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/commands/FreakModelDeleteCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="0" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.7467412">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.47486034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/commands/FreakModelCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="20" selection-start="676" selection-end="681" vertical-scroll-proportion="-0.3482309">
+        <state line="94" column="4" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.84171325" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/views/imagespecs/data.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="22" selection-start="775" selection-end="775" vertical-scroll-proportion="0.124045804" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/controllers/ServiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="5" selection-start="880" selection-end="935" vertical-scroll-proportion="0.5839695" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/views/services/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="22" selection-start="1373" selection-end="2365" vertical-scroll-proportion="0.30343512" />
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/a7050746-3cb9-4e02-9c9b-70087d050ccf">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>a7050746-3cb9-4e02-9c9b-70087d050ccf</OriginalElement>
+          <nodes>
+            <node x="594.0" y="409.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.galleries</node>
+            <node x="107.5" y="1141.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places</node>
+            <node x="1406.0" y="399.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments</node>
+            <node x="822.0" y="419.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.histories</node>
+            <node x="386.0" y="419.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.rates</node>
+            <node x="0.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.downloads</node>
+            <node x="0.0" y="932.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contents</node>
+            <node x="421.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.k_posts</node>
+            <node x="1674.0" y="698.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.versions</node>
+            <node x="205.0" y="708.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.postpages</node>
+            <node x="233.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.demos</node>
+            <node x="1030.0" y="429.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contact_us</node>
+            <node x="892.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.migrations</node>
+            <node x="58.0" y="359.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts</node>
+            <node x="862.0" y="1071.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_group_specs</node>
+            <node x="699.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.services</node>
+            <node x="466.0" y="1355.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.hack_attempts</node>
+            <node x="1654.0" y="399.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images</node>
+            <node x="1063.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.operations</node>
+            <node x="1218.0" y="439.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.subscribes</node>
+            <node x="188.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages</node>
+            <node x="876.0" y="912.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_groups</node>
+            <node x="861.0" y="0.0">a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_group_specs" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.image_groups">
+              <point x="0.0" y="-64.5" />
+              <point x="0.0" y="54.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-144.5" />
+              <point x="212.0" y="309.0" />
+              <point x="880.25" y="309.0" />
+              <point x="-134.75" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments">
+              <point x="0.0" y="104.5" />
+              <point x="1520.0" y="628.0" />
+              <point x="1386.0" y="628.0" />
+              <point x="1386.0" y="503.5" />
+              <point x="-114.0" y="-0.0" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages">
+              <point x="-47.0" y="84.5" />
+              <point x="235.0" y="1101.0" />
+              <point x="168.0" y="1101.0" />
+              <point x="168.0" y="996.5" />
+              <point x="-94.0" y="-0.0" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contents">
+              <point x="-47.0" y="-84.5" />
+              <point x="154.5" y="1121.0" />
+              <point x="74.0" y="1121.0" />
+              <point x="0.0" y="64.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-104.5" />
+              <point x="1768.0" y="309.0" />
+              <point x="1149.75" y="309.0" />
+              <point x="134.75" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.places" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.pages">
+              <point x="47.0" y="-84.5" />
+              <point x="248.5" y="1121.0" />
+              <point x="329.0" y="1121.0" />
+              <point x="47.0" y="84.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.comments" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-104.5" />
+              <point x="1520.0" y="319.0" />
+              <point x="1111.25" y="319.0" />
+              <point x="96.25" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.contact_us" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-74.5" />
+              <point x="1114.0" y="339.0" />
+              <point x="1034.25" y="339.0" />
+              <point x="19.25" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.rates" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-84.5" />
+              <point x="480.0" y="319.0" />
+              <point x="918.75" y="319.0" />
+              <point x="-96.25" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.histories" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-84.5" />
+              <point x="916.0" y="339.0" />
+              <point x="995.75" y="339.0" />
+              <point x="-19.25" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.subscribes" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-64.5" />
+              <point x="1292.0" y="329.0" />
+              <point x="1072.75" y="329.0" />
+              <point x="57.75" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.postpages" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts">
+              <point x="0.0" y="-74.5" />
+              <point x="77.0" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.galleries" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users">
+              <point x="0.0" y="-94.5" />
+              <point x="698.0" y="329.0" />
+              <point x="957.25" y="329.0" />
+              <point x="-57.75" y="144.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.versions" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.images">
+              <point x="0.0" y="-84.5" />
+              <point x="0.0" y="104.5" />
+            </edge>
+            <edge source="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts" target="a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.posts">
+              <point x="-77.0" y="144.5" />
+              <point x="135.0" y="668.0" />
+              <point x="38.0" y="668.0" />
+              <point x="38.0" y="503.5" />
+              <point x="-154.0" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.25236593059936907" x="941.0" y="762.0" />
+          <SelectedNodes>
+            <node>a7050746-3cb9-4e02-9c9b-70087d050ccf.table:kareemphp.users</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/views/imagespecs/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="87" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Gallery/GroupSpec/GroupSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="63" selection-end="63" vertical-scroll-proportion="-2.5325885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/PolymorphicInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="31" selection-start="38" selection-end="155" vertical-scroll-proportion="0.065891474" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Gallery/Image/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="5" selection-start="2515" selection-end="2789" vertical-scroll-proportion="0.27037773" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/core/Operation/Operation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="42" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.25325885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freak/controllers/ImageSpecsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="0" selection-start="2344" selection-end="2344" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/services/one.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.16221374">
           <folding />
         </state>
       </provider>

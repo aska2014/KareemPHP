@@ -1,10 +1,15 @@
 <?php namespace Gallery\Image;
 
+use BaseModel;
 use Gallery\Version\Version;
 use Gallery\Version\VersionAlgorithm;
+use Membership\User\User;
 
-class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInterface {
+class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInterface , \OrderedInterface {
 	protected $connection = 'server';
+    use \Ordered;
+    use \Acceptable;
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -24,7 +29,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
 	 *
 	 * @var array
 	 */
-    protected $guarded = array('id');
+    protected $guarded = array('id', 'accepted');
 
     /**
      * Whether or not to softDelete
@@ -69,7 +74,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
     }
 
     /**
-     * @param VersionAlgorithm $versionAlgorithm
+     * @param \Gallery\Version\VersionAlgorithm $versionAlgorithm
      */
     public function setVersionAlgorithm( VersionAlgorithm $versionAlgorithm )
     {
@@ -77,7 +82,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
     }
 
     /**
-     * @return VersionAlgorithm
+     * @return \Gallery\Version\VersionAlgorithm
      */
     public function getVersionAlgorithm()
     {
@@ -85,52 +90,41 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
     }
 
     /**
+     * @return \Illuminate\Database\Query\Builder
+     */
+    public function getOrderGroup()
+    {
+        return $this->where('imageable_type', $this->imageable_type)
+                    ->where('imageable_id', $this->imageable_id);
+    }
+
+    /**
+     * @param array $attributes
+     * @param User $user
+     * @param BaseModel $model
+     * @return Image
+     */
+    public static function createAndAttach(array $attributes, User $user, BaseModel $model)
+    {
+        $image = $user->images()->create($attributes);
+
+        $image->attachTo($model);
+
+        return $image;
+    }
+
+    /**
      * @param \BaseModel $model
-     * @return mixed
+     * @return $this
      */
     public function attachTo( \BaseModel $model )
     {
-        if(method_exists($model, 'images')) {
-
-            return $model->images()->save($model);
-        }
-    }
-
-    /**
-     * Accept current object.
-     *
-     * @return void
-     */
-    public function accept()
-    {
-        $this->accepted = true;
+        $this->imageable_type = get_class($model);
+        $this->imageable_id   = $model->id;
 
         $this->save();
-    }
 
-    /**
-     * Unaccept current object.
-     *
-     * @return void
-     */
-    public function unaccept()
-    {
-        $this->accepted = false;
-
-        $this->save();
-    }
-
-    /**
-     * Throws an exception if not accepted
-     *
-     * @throws NotAcceptedException
-     * @return void
-     */
-    public function failIfNotAccepted()
-    {
-        if(! $this->accepted)
-
-            throw new NotAcceptedException;
+        return $this;
     }
 
     /**
@@ -207,7 +201,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
      */
     public function getLargest()
     {
-        return $this->getVersionAlgorithm()->largestDim($this->versions())->first();
+        return $this->getVersionAlgorithm()->largestDim()->byImage($this)->first();
     }
 
     /**
@@ -218,7 +212,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
      */
     public function getSmallest()
     {
-        return $this->getVersionAlgorithm()->smallestDim($this->versions())->first();
+        return $this->getVersionAlgorithm()->smallestDim()->byImage($this)->first();
     }
 
     /**
@@ -231,7 +225,7 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
      */
     public function getNearest( $width, $height )
     {
-        return $this->getVersionAlgorithm()->nearestDim($this->versions(), $width, $height)->first();
+        return $this->getVersionAlgorithm()->nearestDim($width, $height)->byImage($this)->first();
     }
 
     /**
@@ -288,5 +282,4 @@ class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInte
     {
         return $this->morphMany('Website\History\History', 'historable');
     }
-
 }

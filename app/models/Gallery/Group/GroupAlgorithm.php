@@ -2,7 +2,18 @@
 
 use \Illuminate\Database\Query\Builder;
 
-class ImageGroupAlgorithm extends \BaseAlgorithm {
+class GroupAlgorithm extends \BaseAlgorithm {
+
+    /**
+     * @param string $name
+     * @return $this
+     */
+    public function byName( $name )
+    {
+        $this->getQuery()->where('name', $name);
+
+        return $this;
+    }
 
 	/**
 	 * Get an empty query for this model.

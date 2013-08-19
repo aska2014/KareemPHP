@@ -1,5 +1,7 @@
 <?php namespace Website\Page;
 
+use Illuminate\Support\Str;
+
 class Page extends \BaseModel {
 	protected $connection = 'server';
 	/**
@@ -51,14 +53,6 @@ class Page extends \BaseModel {
         'title' => 'string',
         'description' => 'text',
     );
-
-    /**
-     * @param string $slug
-     */
-    public function setSlugAttribute( $slug )
-    {
-        $this->attributes['slug'] = urlencode($slug);
-    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

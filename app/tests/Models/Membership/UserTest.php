@@ -92,7 +92,7 @@ class UserTest extends \TestCase {
         // as his profile image.
         $user->setProfileImage($this->factory->create('Gallery\Image\Image'));
 
-        $this->assertTrue( $user->profileImage instanceof \Gallery\Image\Image );
+        $this->assertTrue( User::find($user->id)->getProfileImage() instanceof \Gallery\Image\Image );
     }
 
 }

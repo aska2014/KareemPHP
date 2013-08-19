@@ -1,5 +1,5 @@
 <?php
 
-$content = new core\Model( 'Page' );
+$page = new core\Model( 'Page' );
 
-return $content;
+return $page;

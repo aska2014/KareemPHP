@@ -3,6 +3,15 @@
 class EasyRoute extends Route {
 
     /**
+     * @param $name
+     * @return bool
+     */
+    public static function is( $name )
+    {
+        return static::currentRouteName() == $name || Request::url() == URL::to($name);
+    }
+
+    /**
      * Easy way to create controllers
      *
      * @param  string $class
@@ -11,13 +20,13 @@ class EasyRoute extends Route {
      */
     public static function controller($class, $routes)
     {
-        $types  = array('get', 'post', 'put', 'delete');
         $wheres = array('{id}' => '[0-9]+', '{title}' => '.*', '{slug}' => '.*');
 
         foreach ($routes as $route => $array)
         {
             $uri = $array[0];
 
+            $types  = array('get', 'post', 'put', 'delete');
             $methods = explode(',', $array[1]);
 
             for ($i = 0; $i < count($methods); $i++)

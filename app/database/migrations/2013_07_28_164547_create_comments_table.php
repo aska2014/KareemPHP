@@ -21,8 +21,11 @@ class CreateCommentsTable extends Migration {
             $table->boolean('accepted')->default(false);
 
             // We better make it polymorphic ...
-            $table->integer('commetable_id')->unsigned();
+            $table->integer('commentable_id')->unsigned();
             $table->string('commentable_type');
+
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on('comments')->onDelete('CASCADE');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');

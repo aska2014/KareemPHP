@@ -19,10 +19,13 @@ abstract class BaseAlgorithm {
 
     /**
      * @param Builder $query
+     * @return $this
      */
     public function setQuery( Builder $query )
     {
         $this->query = $query;
+
+        return $this;
     }
 
     /**
@@ -91,6 +94,15 @@ abstract class BaseAlgorithm {
         $this->reset();
 
         return $model;
+    }
+
+    /**
+     * @param $num
+     * @return \Illuminate\Database\Query\Builder|static
+     */
+    public function take($num)
+    {
+        return $this->getQuery()->take($num);
     }
 
     /**

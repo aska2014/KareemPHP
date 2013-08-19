@@ -1,6 +1,8 @@
 <?php namespace Blog\Post;
 
 use Gallery\Image\Image;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Str;
 use Membership\User\User;
 
 class Post extends \BaseModel {
@@ -11,7 +13,6 @@ class Post extends \BaseModel {
     const DRAFT = 0;
     const POST = 1;
     const REVIEW = 2;
-    const COUNTDOWN = 3;
 
     /**
      * Difficulty constants
@@ -77,6 +78,30 @@ class Post extends \BaseModel {
     );
 
     /**
+     * @return bool
+     */
+    public function isDraft()
+    {
+        return $this->state == self::DRAFT;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPost()
+    {
+        return $this->state == self::POST;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isReview()
+    {
+        return $this->state == self::REVIEW;
+    }
+
+    /**
      * @return string
      */
     public function getDescription()
@@ -85,22 +110,55 @@ class Post extends \BaseModel {
     }
 
     /**
+     * @return array
+     */
+    public static function getDifficulties()
+    {
+        return array(
+            self::BEGINNER     => 'beginner',
+            self::INTERMEDIATE => 'intermediate',
+            self::ADVANCED     => 'advanced',
+        );
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStates()
+    {
+        return array(
+            self::DRAFT  => 'draft',
+            self::POST   => 'post',
+            self::REVIEW => 'review'
+        );
+    }
+
+    /**
+     * @return string
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @return string
+     */
+    public function getState()
+    {
+        $states = $this->getStates();
+
+        return $states[$this->state];
+    }
+
+    /**
      * @return string
      */
     public function getDifficulty()
     {
-        switch($this->difficulty)
-        {
-            case self::BEGINNER:
-                return 'beginner';
+        $difficulties = $this->getDifficulties();
 
-            case self::INTERMEDIATE:
-                return 'intermediate';
-
-            case self::ADVANCED:
-            default:
-                return 'advanced';
-        }
+        return $difficulties[$this->difficulty];
     }
 
     /**
@@ -123,6 +181,15 @@ class Post extends \BaseModel {
     }
 
     /**
+     * @param $slug
+     * @return bool
+     */
+    public function sameSlug($slug)
+    {
+        return $this->getSlug() == $slug;
+    }
+
+    /**
      * @return string
      */
     public function getSlug()
@@ -135,7 +202,7 @@ class Post extends \BaseModel {
      */
     public function setSlugAttribute( $slug )
     {
-        $this->attributes['slug'] = urlencode($slug);
+        $this->attributes['slug'] = Str::slug($slug);
     }
 
     /**
@@ -167,12 +234,83 @@ class Post extends \BaseModel {
     }
 
     /**
+     * @return Image
+     */
+    public function getMainImage()
+    {
+        return $this->mainImage;
+    }
+
+    /**
      * @param Image $image
-     * @return mixed
+     * @return $this
      */
     public function setMainImage( Image $image )
     {
+        if($mainImage = $this->getMainImage())
+
+            $image->override($mainImage);
+
         return $this->mainImage()->save($image);
+    }
+
+    /**
+     * @param int $order
+     * @return mixed
+     */
+    public function getPage( $order )
+    {
+        return $this->pages->getByOrder($order);
+    }
+
+    /**
+     * @param array $attributes
+     * @return \Illuminate\Database\Eloquent\Model|mixed
+     */
+    public function attachDemo(array $attributes)
+    {
+        if($demo = $this->demo) {
+
+            $demo->update($attributes);
+
+            return $demo;
+        }
+
+        return $this->demo()->create($attributes);
+    }
+
+    /**
+     * Create or update download
+     *
+     * @param array $attributes
+     * @return \Illuminate\Database\Eloquent\Model|mixed
+     */
+    public function attachDownload(array $attributes)
+    {
+        if($download = $this->download) {
+
+            $download->update($attributes);
+
+            return $download;
+        }
+
+        return $this->download()->create($attributes);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
+    public function demo()
+    {
+        return $this->morphOne('Blog\Demo\Demo', 'demoable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     */
+    public function download()
+    {
+        return $this->morphOne('Blog\Download\Download', 'downloadable');
     }
 
     /**
@@ -221,5 +359,13 @@ class Post extends \BaseModel {
     public function rates()
     {
         return $this->morphMany('Blog\Rate\Rate', 'ratable');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function comments()
+    {
+        return $this->morphMany('Blog\Comment\Comment', 'commentable');
     }
 }

@@ -51,7 +51,7 @@ class Group extends \BaseModel {
     );
 
     /**
-     * @param string $name
+     * @param $name
      * @return Group
      */
     public static function getByName( $name )

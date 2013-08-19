@@ -3,6 +3,8 @@
 @section('content')
 <div id="content">
 
+    @include('parts.messages')
+
     <div class="sep">
         <h4>{{ $homeTitle }}<span>>></span> </h4>
     </div>
@@ -15,13 +17,13 @@
         </h2>
         <span class="datetime">Posted on {{ $post->getPostedAt('d M Y at H:i') }}</span>
         &nbsp-&nbsp
-        <span class="difficulty">Difficulty : <font color="#F70"> {{ $post->getDifficulty() }} </font></span>
+        <span class="difficulty">Difficulty : <span class="{{ $post->getDifficulty() }}"> {{ $post->getDifficulty() }} </font></span>
 
         <div class="clr"></div>
         <div class="tobic_info">
             <a href="{{ EasyURL::post($post) }}" id="imghome_{{ $post->id }}">
                 @if($mainImage = $post->mainImage)
-                <img class="mainImg" alt="{{ $post->getTitle() }}" src="{{ $mainImage->getNearst(150, 150)->getUrl() }}" />
+                <img class="mainImg" alt="{{ $post->getTitle() }}" src="{{ $mainImage->getNearest(150, 150)->getUrl() }}" />
                 @endif
             </a>
             <p class="home_p">{{ $post->getDescription() }}</p>
@@ -36,10 +38,9 @@
     <hr />
     @endforeach
 
-    {{ $posts->links() }}
+    <div class="pages">
+        {{ $posts->links() }}
+    </div>
 
-<!--    <div id="pages">-->
-<!--        <a class="current" href="http://localhost/Blogging_website.com/home/page-1.html">1</a>-->
-<!--    </div>-->
 </div><!-- END of content -->
 @stop

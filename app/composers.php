@@ -1,5 +1,6 @@
 <?php
 use Asset\Asset;
+use Website\Page\Page;
 
 // Share error messages along all views
 View::share('errors', (array) Session::get('errors', array()));
@@ -7,9 +8,10 @@ View::share('errors', (array) Session::get('errors', array()));
 // Share success messages along all views
 View::share('success', (array) Session::get('success', array()));
 
+// Share authenticated user
+View::share('authUser', Auth::user());
 
-
-View::composer('layout1.index', function($view)
+View::composer(array('layout1.index', 'layout2.index'), function($view)
 {
     $view->metaDescription = "JustDevelopWebsites helps web developers build exceptional functionalities in their websites, it's updated every 4 days with a unique tutorial on PHP, MySQL, JavaScript, JQuery, XHTML and CSS, you can also request a tutorial";
     $view->metaKeywords    = "Develop websites, PHP tutorials, MySQL, JavaScript, JQuery, XHTML, CSS, website tutorials, request a tutorial";
@@ -18,6 +20,22 @@ View::composer('layout1.index', function($view)
     $view->mainParts = array('scroll_top');
 });
 
+
+View::composer('layout1.index', function($view)
+{
+    Asset::addPage('layout1');
+});
+
+View::composer('layout2.index', function($view)
+{
+    Asset::addPage('layout2');
+});
+
+
+View::composer('layout1.header', function($view)
+{
+    $view->menuPages = Page::all();
+});
 
 
 // Layout1 right panel...
@@ -35,7 +53,7 @@ View::composer('rightpanel.archive', function($view)
 
 View::composer('rightpanel.popular', function($view)
 {
-   $view->popularPosts = App::make('Blog\Post\PostAlgorithm')->popular()->get();
+   $view->popularPosts = App::make('Blog\Post\PostAlgorithm')->popular()->postState()->take(6)->get();
 });
 //////////////////////////////////////////////////////////
 
@@ -60,4 +78,12 @@ View::composer('parts.scroll_top', function($view)
 
 
 
+View::composer('posts.one', function($view)
+{
+    Asset::addPlugins(array('form', 'syntax'));
+});
 
+View::composer('services.one', function($view)
+{
+    Asset::addPlugin('slider');
+});

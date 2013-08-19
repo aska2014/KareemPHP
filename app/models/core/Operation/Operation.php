@@ -1,6 +1,6 @@
 <?php namespace core\Operation;
 
-class Operation extends \BaseModel {
+class Operation extends \BaseModel implements \PolymorphicInterface {
 
     /**
 	 * The database table used by the model.
@@ -50,6 +50,62 @@ class Operation extends \BaseModel {
     );
 
     /**
+     * @param \BaseModel $model
+     * @return $this
+     */
+    public function attachTo( \BaseModel $model )
+    {
+        $this->operable_type = get_class($model);
+        $this->operable_id   = $model->id;
+
+        $this->save();
+
+        return $this;
+    }
+
+    /**
+     * @param $code
+     * @return \BaseModel
+     */
+    public static function createFromCodeFormat( $code )
+    {
+        $start = strpos($code, '(') + 1;
+        $end = strpos($code, ')');
+
+        $method= substr($code, 0, strpos($code, '('));
+        $args = substr($code, $start, $end - $start);
+
+        return static::create(array(
+            'method' => $method,
+            'args'   => $args
+        ));
+    }
+
+    /**
+     * @param $type
+     */
+    public function setType( $type )
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @param $method
+     */
+    public function setMethod( $method )
+    {
+        $this->method = $method;
+    }
+
+    /**
+     * @param array $arguments
+     */
+    public function setArguments( array $args )
+    {
+        $this->args = implode(',', $args);
+    }
+
+    /**
      * @return mixed
      */
     public function getMethod()
@@ -65,6 +121,14 @@ class Operation extends \BaseModel {
         if($this->args == '') return array();
 
         return explode(',', $this->args);
+    }
+
+    /**
+     * @return string
+     */
+    public function getCodeFormat()
+    {
+        return $this->getMethod() . '(' . $this->args . ')';
     }
 
     /**

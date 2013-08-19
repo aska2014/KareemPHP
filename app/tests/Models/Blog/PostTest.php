@@ -57,7 +57,7 @@ class PostTest extends \TestCase {
         // If not equals that means it's modified
         $this->assertNotEquals($post->slug, 'bla bla bla bla');
 
-        $this->assertEquals(str_word_count($post->slug), 4);
+        $this->assertNotEquals('', $post->slug);
     }
 
     public function testCreatingPostPages()
@@ -111,8 +111,8 @@ class PostTest extends \TestCase {
     {
         $post = $this->factory->create('Blog\Post\Post');
 
-        $post->setMainImage($this->factory->create('Gallery\Image\Image'));
+        $image = $post->setMainImage($this->factory->create('Gallery\Image\Image'));
 
-        $this->assertTrue($post->mainImage instanceof \Gallery\Image\Image);
+        $this->assertTrue(Post::find($post->id)->getMainImage() instanceof \Gallery\Image\Image);
     }
 }

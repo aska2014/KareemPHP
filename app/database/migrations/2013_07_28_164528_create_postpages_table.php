@@ -19,6 +19,8 @@ class CreatePostpagesTable extends Migration {
 
             $table->text('body');
 
+            $table->integer('order');
+
             $table->integer('post_id')->unsigned();
             $table->foreign('post_id')->references('id')->on('posts')->onDelete('CASCADE');
 

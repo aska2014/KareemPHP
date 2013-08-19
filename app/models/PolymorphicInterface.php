@@ -4,8 +4,7 @@ interface PolymorphicInterface{
 
     /**
      * @param BaseModel $model
-     * @return mixed
+     * @return $this
      */
     public function attachTo(BaseModel $model);
-
 }

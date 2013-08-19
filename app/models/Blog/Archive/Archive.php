@@ -45,7 +45,7 @@ class Archive {
                 // Get loop month
                 $monthNo = date('m', strtotime('-' . $i . ' month'));
 
-                $count = $this->postAlgorithm->year($yearNo)->month($monthNo)->count();
+                $count = $this->postAlgorithm->year($yearNo)->month($monthNo)->postState()->count();
 
                 if($count > 0) $year->addMonth(new Month($monthNo, $count));
             }

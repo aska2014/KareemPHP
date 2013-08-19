@@ -61,6 +61,26 @@ class GroupSpec extends \BaseModel {
     }
 
     /**
+     * @param \core\Operation\Operation[]|\core\Operation\Operation $operations
+     */
+    public function replaceOperations($operations)
+    {
+        $this->operations()->delete();
+
+        if(is_array($operations))
+        {
+            foreach($operations as $operation)
+            {
+                $this->operations()->save($operation);
+            }
+        }
+        else
+        {
+            $this->operations()->save($operations);
+        }
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function operations()
