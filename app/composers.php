@@ -13,9 +13,9 @@ View::share('authUser', Auth::user());
 
 View::composer(array('layout1.index', 'layout2.index'), function($view)
 {
-    $view->metaDescription = "JustDevelopWebsites helps web developers build exceptional functionalities in their websites, it's updated every 4 days with a unique tutorial on PHP, MySQL, JavaScript, JQuery, XHTML and CSS, you can also request a tutorial";
-    $view->metaKeywords    = "Develop websites, PHP tutorials, MySQL, JavaScript, JQuery, XHTML, CSS, website tutorials, request a tutorial";
-    $view->pageTitle       = isset($view->pageTitle) ? $view->pageTitle: 'Kareem PHP personal blog for php tutorials';
+    $view->metaDescription = "In this blog I will be posting web development and design tutorials with PHP, MySQL, Javascript, HTML5 and CSS";
+    $view->metaKeywords    = "Develop websites, PHP tutorials, MySQL, JavaScript, JQuery, HTML5, CSS, website tutorials, request a tutorial";
+    $view->pageTitle       = isset($view->pageTitle) ? $view->pageTitle: 'Kareem PHP blog for web development tutorials with PHP';
 
     $view->mainParts = array('scroll_top');
 });

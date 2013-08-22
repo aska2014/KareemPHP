@@ -60,7 +60,7 @@
     {
         $("#slideshow").craftyslide({
             width: 640,
-            height:640
+            height:500
         });
     });
 

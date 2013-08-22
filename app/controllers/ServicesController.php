@@ -1,8 +1,14 @@
 <?php
 
 use website\Service\Service;
+use website\Service\ServiceAlgorithm;
 
 class ServicesController extends BaseController {
+
+    /**
+     * @var website\Service\ServiceAlgorithm
+     */
+    protected $servicesAlgorithm;
 
     /**
      * @var website\Service\Service
@@ -10,10 +16,12 @@ class ServicesController extends BaseController {
     protected $services;
 
     /**
-     * @param Service $services
+     * @param website\Service\ServiceAlgorithm $servicesAlgorithm
+     * @param website\Service\Service $services
      */
-    public function __construct( Service $services )
+    public function __construct( ServiceAlgorithm $servicesAlgorithm, Service $services )
     {
+        $this->servicesAlgorithm = $servicesAlgorithm;
         $this->services = $services;
     }
 
@@ -22,9 +30,11 @@ class ServicesController extends BaseController {
      */
     public function index()
     {
-        $services = $this->services->all();
+        $services = $this->servicesAlgorithm->order()->get();
 
-        return View::make('services.all', compact('services'));
+        $pageTitle = 'Web development and design services.';
+
+        return View::make('services.all', compact('services', 'pageTitle'));
     }
 
     /**

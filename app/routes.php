@@ -28,7 +28,7 @@ EasyRoute::controller('SubscribeController', array(
 
 EasyRoute::controller('ServicesController', array(
 
-    'services' => array('services.html', 'index'),
+    'services' => array('website-services.html', 'index'),
     'service'  => array('service-{id}.html', 'show')
 
 ));

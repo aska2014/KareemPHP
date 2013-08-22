@@ -24,7 +24,9 @@ class HomeController extends BaseController {
 
         $homeTitle = 'Recent tutorials';
 
-		return View::make('home.index', compact('posts', 'homeTitle'));
+        $pageTitle = 'Recent tutorials | Kareem PHP blog for web development tutorials';
+
+		return View::make('home.index', compact('posts', 'homeTitle', 'pageTitle'));
 	}
 
     /**
@@ -38,7 +40,9 @@ class HomeController extends BaseController {
 
         $homeTitle = 'Searching tutorials with keyword: ' . $keyword;
 
-        return View::make('home.index', compact('posts', 'homeTitle'));
+        $pageTitle = 'Searching tutorials with keyword: '. $keyword;
+
+        return View::make('home.index', compact('posts', 'homeTitle', 'pageTitle'));
     }
 
     /**
@@ -50,13 +54,19 @@ class HomeController extends BaseController {
     {
         $posts = $this->postAlgorithm->postState()->year($year);
 
-        if($month) $posts = $posts->month($month)->paginate(self::POSTS_PER_PAGE);
-        else       $posts = $posts->paginate(self::POSTS_PER_PAGE);
+        $format = 'year: ' . $year;
 
-        $homeTitle = 'Tutorials in year: ' . $year;
+        if($month)
+        {
+            $posts = $posts->month($month)->paginate(self::POSTS_PER_PAGE);
+            $format .= ' and month: ' . date('F', mktime(0, 0, 0, $month, 1, 0));
+        }
+        else $posts = $posts->paginate(self::POSTS_PER_PAGE);
 
-        if($month) $homeTitle .= ' and month: ' . date('F', mktime(0, 0, 0, $month, 1, 0));
+        $homeTitle = 'Tutorials in ' . $format;
 
-        return View::make('home.index', compact('posts', 'homeTitle'));
+        $pageTitle = 'Displaying tutorials in ' . $format;
+
+        return View::make('home.index', compact('posts', 'homeTitle', 'pageTitle'));
     }
 }

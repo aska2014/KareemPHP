@@ -28,7 +28,9 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
+	'local' => array('*kareemphp.loc'),
+
+    'production' => array('*kareemphp.com')
 
 ));
 

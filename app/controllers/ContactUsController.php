@@ -31,7 +31,9 @@ class ContactUsController extends BaseController {
      */
     public function index()
     {
-        return View::make('contact_us.index');
+        $pageTitle = 'Contact Kareem Mohamed | KareemPHP blog for PHP tutorials';
+
+        return View::make('contact_us.index', compact('pageTitle'));
     }
 
     /**

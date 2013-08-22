@@ -15,16 +15,14 @@
             @if($image = $service->getMainImage())
             <li>
                 <a href="{{ EasyURL::service($service) }}">
-                    <img src="{{ $image->getSmallest()->url }}" width="200" height="150">
+                    <img src="{{ $image->getSmallest()->url }}" width="200" height="124">
                 </a>
             </li>
             @endif
             @endforeach
         </ul>
         <div class="clr"></div>
-        <p>
-            To see our projects working <a class="scroll" href="#contact" style="color:#009">please contact us</a>.
-        </p><br>
+        <br/>
         <h3>We promise to</h3>
         <p>
         </p><ol>

@@ -73,12 +73,15 @@ class PostsController extends BaseController {
         $postPage = $this->pageAlgorithm->byPost($mainPost)->order()->paginate(1);
 
         // Get the related tutorials
-        $relatedPosts = $this->postAlgorithm->related( $mainPost )->get();
+        $relatedPosts = $this->postAlgorithm->related( $mainPost )->postState()->get();
 
         // Get post parent and accepted comments
         $postComments = $this->commentAlgorithm->byPost($mainPost)->noParent()->accepted()->get();
 
-        return View::make('posts.one', compact('mainPost', 'postPage', 'relatedPosts', 'postComments'));
+        // Page title
+        $pageTitle = $mainPost->getTitle();
+
+        return View::make('posts.one', compact('mainPost', 'postPage', 'relatedPosts', 'postComments', 'pageTitle'));
     }
 
     /**
