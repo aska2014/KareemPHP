@@ -1,5 +1,6 @@
 <?php
 
+use Blog\Post\Post;
 use Website\Page\Page;
 
 EasyRoute::controller('HomeController', array(
@@ -59,89 +60,3 @@ Route::get('message-to-user.html', array('as' => 'message-to-user', function()
 
     dd($messenger->getTitle());
 }));
-
-
-
-use Blog\Post\Post;
-use Membership\User\User;
-use Blog\Page\Page as PostPage;
-
-Route::get('convert',function()
-{
-    $post = Post::find(17);
-
-    foreach($post->pages as $page)
-    {
-        $body = html_entity_decode($page->body);
-
-        preg_match_all('/< *img[^>]*src *= *["\']?([^"\']*)/i', $body, $matches);
-
-        for ($i=0; $i < count($matches[0]); $i++)
-        {
-            $tag    = $matches[0][$i];
-            $source = $matches[1][$i];
-
-            if(strpos($source, 'justdevelopwebsites.com/public/albums') > -1)
-            {
-                $newSource = str_replace('justdevelopwebsites.com/public/albums', 'kareemphp.loc/albums/old_images', $source);
-
-                $page->body = str_replace($source, $newSource, $body);
-            }
-        }
-        $page->save();
-    }
-
-//    $posts = Post::all();
-//
-//    foreach($posts as $post)
-//    {
-//        foreach($post->pages as $page)
-//        {
-//            $body = html_entity_decode($page->body);
-//
-//            preg_match_all('/< *img[^>]*src *= *["\']?([^"\']*)/i', $body, $matches);
-//
-//            for ($i=0; $i < count($matches[0]); $i++)
-//            {
-//                $tag    = $matches[0][$i];
-//                $source = $matches[1][$i];
-//
-//                if(strpos($source, 'justdevelopwebsites.com/public/albums') > -1)
-//                {
-//
-//                    $newSource = str_replace('justdevelopwebsites.com/public/albums', 'kareemphp.loc/albums/old_images', $source);
-//
-//                    $page->body = str_replace($source, $newSource, $body);
-//                }
-//            }
-//            // $page->save();
-//        }
-
-
-        // Creating post
-        // $post = new Post(array(
-        //     'title' => $oldPost->title,
-        //     'description' => $oldPost->_desc,
-        //     'tags' => $oldPost->tags,
-        //     'slug' => $slug,
-        //     'difficulty' => $oldPost->difficulty,
-        //     'state' => Post::DRAFT,
-        // ));
-        // // Attaching post to the boss
-        // $user->posts()->save($post);
-
-        // // Creating post pages
-        // $oldPages = explode("====PAGE====", $oldPost->body);
-
-        // foreach($oldPages as $oldPage)
-        // {
-        //     $oldPage = str_replace("====SOURCEFILES====", "", $oldPage);
-
-        //     $oldPage = stripslashes($oldPage);
-
-        //     $post->pages()->create(array(
-        //         'body' => $oldPage
-        //     ));
-        // }
-//    }
-});

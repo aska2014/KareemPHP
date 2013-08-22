@@ -35,7 +35,7 @@ class PostAlgorithm extends \BaseAlgorithm {
                                 $query->orWhere('title', 'like', '%' . $keyword . '%')
                                     ->orWhere('tags', 'like', '%' . $keyword . '%');
                             }
-                        })->orderBy('id', DB::raw('RAND()'));
+                        })->orderBy(DB::raw('RAND()'));
 
         return $this;
     }

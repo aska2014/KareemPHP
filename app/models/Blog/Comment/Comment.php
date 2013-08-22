@@ -2,9 +2,12 @@
 
 use Illuminate\Database\Eloquent\Collection;
 
-class Comment extends \BaseModel implements \AcceptableInterface, \PolymorphicInterface {
+class Comment extends \BaseModel implements \PolymorphicInterface {
 
-    use \Acceptable;
+    /**
+     * @var array
+     */
+    protected $uses = array('Acceptable');
 
 	/**
 	 * The database table used by the model.

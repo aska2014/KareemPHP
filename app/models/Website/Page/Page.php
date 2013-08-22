@@ -1,7 +1,5 @@
 <?php namespace Website\Page;
 
-use Illuminate\Support\Str;
-
 class Page extends \BaseModel {
 
 	/**

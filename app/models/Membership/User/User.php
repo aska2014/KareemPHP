@@ -9,9 +9,12 @@ use Illuminate\Hashing\BcryptHasher;
 use NotAcceptedException;
 use Website\Subscribe\Subscribe;
 
-class User extends \BaseModel implements UserInterface, RemindableInterface, \AcceptableInterface {
+class User extends \BaseModel implements UserInterface, RemindableInterface {
 
-    use \Acceptable;
+    /**
+     * @var array
+     */
+    protected $uses = array('Acceptable');
 
     /**
      * Users types
