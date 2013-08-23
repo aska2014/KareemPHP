@@ -39,6 +39,12 @@ EasyRoute::controller('ContactUsController', array(
     'contact-us' => array('contact-us.html', 'index,send')
 ));
 
+EasyRoute::controller('SiteMapController', array(
+
+    'sitemap' => array('sitemap', 'xml')
+
+));
+
 // Loop through all pages and add route for their slugs...
 foreach(Page::all() as $page)
 {
@@ -47,12 +53,6 @@ foreach(Page::all() as $page)
         return View::make('pages.one', compact('page'));
     });
 }
-
-EasyRoute::controller('PagesController', array(
-
-    'page' => array('page/{slug}-{id}.html', 'show')
-));
-
 
 Route::get('message-to-user.html', array('as' => 'message-to-user', function()
 {
