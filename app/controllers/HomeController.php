@@ -5,7 +5,7 @@ use Blog\Archive\Archive;
 
 class HomeController extends BaseController {
 
-    const POSTS_PER_PAGE = 9;
+    const POSTS_PER_PAGE = 5;
 
     /**
      * @param PostAlgorithm $postAlgorithm

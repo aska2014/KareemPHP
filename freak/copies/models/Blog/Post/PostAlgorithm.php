@@ -25,11 +25,17 @@ class PostAlgorithm extends \BaseAlgorithm {
         $this->getQuery()->where('id', '!=', $post->id)
                         ->where(function(Builder $query) use ($post)
                         {
-                            $query->where('title', 'like', '%' . $post->getTitle() . '%')
-                                ->orWhere('description', 'like', '%' . $post->getTitle() . '%')
-                                ->orWhere('tags', 'like', '%' . $post->getTags() . '%')
-                                ->orderBy('id', DB::raw('RAND()'));
-                        });
+                            $keywords = explode(" ", $post->getTitle());
+                            $keywords = array_merge($keywords, $post->getTagsArray());
+
+                            foreach($keywords as $keyword)
+                            {
+                                if($keyword == '') continue;
+
+                                $query->orWhere('title', 'like', '%' . $keyword . '%')
+                                    ->orWhere('tags', 'like', '%' . $keyword . '%');
+                            }
+                        })->orderBy(DB::raw('RAND()'));
 
         return $this;
     }

@@ -69,6 +69,6 @@ class SubscribeController  extends BaseController {
 
         $user->attachSubscribe($array);
 
-        return $this->messageToUser('You have subscribed successfully.', 'Thanks for your subscription..');
+        return $this->messageToUser('You have subscribed successfully.', 'Thanks for your subscription to my blog.');
     }
 }

@@ -15,7 +15,7 @@
                 {{ $post->getTitle() }}
             </a>
         </h2>
-        <span class="datetime">Posted on {{ $post->getPostedAt('d M Y at H:i') }}</span>
+        <span class="datetime">Posted on {{ $post->getPostedAt('d M Y') }}</span>
         &nbsp-&nbsp
         <span class="difficulty">Difficulty : <span class="{{ $post->getDifficulty() }}"> {{ $post->getDifficulty() }} </font></span>
 
@@ -39,7 +39,7 @@
     @endforeach
 
     <div class="pages">
-        {{ $posts->links() }}
+        {{ $posts->appends(Input::except(array('page')))->links() }}
     </div>
 
 </div><!-- END of content -->

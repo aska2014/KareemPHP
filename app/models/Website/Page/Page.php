@@ -53,6 +53,22 @@ class Page extends \BaseModel {
     );
 
     /**
+     * @return boolean
+     */
+    public function doesItShowInMenu()
+    {
+        return $this->show_in_menu;
+    }
+
+    /**
+     * Show this page in menu
+     */
+    public function showItInMenu()
+    {
+        $this->show_in_menu = true;
+    }
+
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function children()

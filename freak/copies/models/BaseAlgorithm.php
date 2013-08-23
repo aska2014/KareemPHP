@@ -144,6 +144,14 @@ abstract class BaseAlgorithm {
     }
 
     /**
+     * @return static
+     */
+    public static function make()
+    {
+        return new static;
+    }
+
+    /**
      * @return Builder
      */
     public abstract function emptyQuery();

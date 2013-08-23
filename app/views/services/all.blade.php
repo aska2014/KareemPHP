@@ -6,9 +6,14 @@
     @include('parts.messages')
 
     <div class="main_tobic">
-        <h1>Get your website Designed, Developed, Managed and At the first pages of Google search engine</h1>
+        <h1>Get your website Designed, Developed, Published and at the first pages of Google search engine</h1>
+
+        @include('parts.facebook_like')
+
         <p>
-            We are a highly qualified expert web development team including creative designers, developers and internet marketers, we have built many websites, these are the latest ones:<br>
+            We are a group of developers, designers and marketers ready to create your idea with the lowest costs and minimum time
+            <a href="#contact">Contact Us</a>.<br />
+            Bellow are the latest websites we created
         </p>
         <ul class="gallery clearfix">
             @foreach($services as $service)
@@ -22,20 +27,19 @@
             @endforeach
         </ul>
         <div class="clr"></div>
-        <br/>
         <h3>We promise to</h3>
         <p>
         </p><ol>
-            <li>Design a very attractive looking website.</li>
+            <li>Design an attractive or simple looking website depending on your request.</li>
             <li>Build a high performance website.</li>
             <li>Include a control panel to customize all the content in the website and the design if needed.</li>
             <li>Make a very secure website.</li>
-            <li>Optimize the website for search engines.</li>
+            <li>Optimize the website for search engines (SEO).</li>
             <li>Deploy the website, attract visitors and rank well for Google.</li>
         </ol>
         <p></p>
 
-        <h3 id="contact">Contact us</h3>
+        <h3 id="contact">Contact Us</h3>
         @include('contact_us.form')
 
     </div>

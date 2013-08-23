@@ -2,6 +2,7 @@
 
 use Asset\Asset;
 use PathManager\Path;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Tracking\Tracker;
 
 // Initialize my packages
@@ -70,6 +71,17 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+});
+
+
+
+App::missing(function()
+{
+    $sitemap = SiteMap::instance()->toHtml();
+
+    $messenger = new Messenger('404 - Page can not be found', 'Sorry but the page you are looking for cannot be found<br />' . $sitemap);
+
+    return View::make('messenger.index', compact('messenger'));
 });
 
 

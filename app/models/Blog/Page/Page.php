@@ -61,19 +61,23 @@ class Page extends \BaseModel {
     );
 
     /**
-     * @return string
+     * @return Body
      */
     public function getBody()
     {
-        return $this->body;
+        return new Body($this->body);
     }
 
     /**
-     * @return string
+     * @return Body
      */
     public function getReadyBody()
     {
-        return html_entity_decode($this->getBody());
+        $body = $this->getBody();
+
+        $body->makeReady();
+
+        return $body;
     }
 
     /**

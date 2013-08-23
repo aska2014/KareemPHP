@@ -6,19 +6,21 @@
     @include('parts.messages')
 
     <div class="main_tobic">
-        <span class="datetime">Written by <a href="http://localhost/Blogging_website.com/about.html">kareem mohamed</a> on 20 Jan 2013. You can find him on <a rel="author" href="https://plus.google.com/u/0/112390694177730751935?rel=author">Google+</a></span>
+        <span class="datetime">Written by <a href="{{ URL::to('about-me.html') }}">kareem mohamed</a> on 20 Jan 2013. You can find him on <a rel="author" href="https://plus.google.com/u/0/112390694177730751935?rel=author">Google+</a></span>
         <h1>{{ $mainPost->title }}</h1>
 
-<!--        <div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-send="true" data-width="450" data-show-faces="true" fb-xfbml-state="rendered"><span style="height: 29px; width: 450px;"><iframe id="f3144f4798" name="f3270be1a" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=273308966107997&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df24a717b8%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff30d722c3c%26domain%3Dlocalhost%26relation%3Dparent.parent&amp;href=http%3A%2F%2Flocalhost%2FBlogging_website.com%2Ftutorial%2FThis-is-the-title-1-53.html&amp;node_type=link&amp;width=450&amp;layout=standard&amp;colorscheme=light&amp;show_faces=true&amp;send=true&amp;extended_social_context=false" style="border: none; overflow: hidden; height: 29px; width: 450px;"></iframe></span></div>-->
+        @include('parts.facebook_like')
+
+        @if($mainPost->download || $mainPost->demo)
         <div class="download">
             @if($download = $mainPost->download)
-            <a href="{{ EasyURL::download($download) }}" class="download">Download Source Files</a>
+            <a href="{{ EasyURL::download($download) }}" target="_blank" class="download">Download Source Files</a>
             @endif
             @if($demo = $mainPost->demo)
-            <a href="{{ $demo->getLink() }}" class="download">View It Online</a>
+            <a href="{{ $demo->getLink() }}" target="_blank" class="download">View It Online</a>
             @endif
         </div>
-        <br />
+        @endif
 
         <div class="clr"></div>
 
@@ -31,7 +33,7 @@
         </div>
 
         <br />
-<!--        <div class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-send="true" data-width="450" data-show-faces="true" fb-xfbml-state="rendered"><span style="height: 29px; width: 450px;"><iframe id="f22dac9638" name="f21ad81018" scrolling="no" title="Like this content on Facebook." class="fb_ltr" src="http://www.facebook.com/plugins/like.php?api_key=273308966107997&amp;locale=en_US&amp;sdk=joey&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D24%23cb%3Df2351a7f0c%26origin%3Dhttp%253A%252F%252Flocalhost%252Ff30d722c3c%26domain%3Dlocalhost%26relation%3Dparent.parent&amp;href=http%3A%2F%2Flocalhost%2FBlogging_website.com%2Ftutorial%2FThis-is-the-title-1-53.html&amp;node_type=link&amp;width=450&amp;layout=standard&amp;colorscheme=light&amp;show_faces=true&amp;send=true&amp;extended_social_context=false" style="border: none; overflow: hidden; height: 29px; width: 450px;"></iframe></span></div>-->
+        @include('parts.facebook_like')
         <div class="clr"></div>
         <br />
 

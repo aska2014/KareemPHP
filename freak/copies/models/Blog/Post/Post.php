@@ -134,6 +134,17 @@ class Post extends \BaseModel {
     }
 
     /**
+     * @return array
+     */
+    public function getTagsArray()
+    {
+        return array_map(function( $elem )
+        {
+            return trim($elem);
+        }, explode(",", $this->tags));
+    }
+
+    /**
      * @return string
      */
     public function getTags()

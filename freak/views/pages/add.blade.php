@@ -1,6 +1,14 @@
 @extends('models.master')
 
 @section('body')
+<div class="uploader">
+    <div class="rightBtn"></div>
+
+    <form action="{{ URL::action('PostPageController@upload', 0) }}" method="POST" id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="normal-image" />
+        <input type="submit" value="U"/>
+    </form>
+</div>
 <div class="row-fluid">
 	<div class="span12 widget">
         <div class="widget-header">
@@ -37,6 +45,20 @@
 
 
                 <div class="control-group">
+                    <label class="control-label">Show in menu</label>
+                    <div class="controls">
+                        @if($page->doesItShowInMenu())
+                            Yes<input type="radio" name="Page[show_in_menu]" value="1" checked="checked" />
+                            No<input type="radio" name="Page[show_in_menu]" value="0"/>
+                        @else
+                            Yes<input type="radio" name="Page[show_in_menu]" value="1" />
+                            No<input type="radio" name="Page[show_in_menu]" value="0" checked="checked" />
+                        @endif
+                    </div>
+                </div>
+
+
+                <div class="control-group">
                     <label class="control-label">Title</label>
                     <div class="controls">
                         <input name="Page[title]" value="{{ $page->title }}" type="text" id="title" class="span12">
@@ -47,7 +69,7 @@
                 <div class="control-group">
                     <label class="control-label">Page description</label>
                     <div class="controls">
-                        <textarea id="cleditor" name="Page[description]">{{ $page->description }}</textarea>
+                        <textarea id="editor1" name="Page[description]">{{ $page->description }}</textarea>
                     </div>
                 </div>
 
@@ -64,18 +86,56 @@
 @stop
 
 @section('scripts')
+<style type="text/css">
+    .uploader{position: fixed; bottom:30px; right:0px; z-index: 5555555000; background:#FFF; border:1px solid #BBB;}
+    #uploadForm{display:none;}
+    .rightBtn{padding:10px; background:#333; cursor: pointer}
+</style>
+
 <script type="text/javascript">
 
     $(document).ready(function()
     {
-        $('#cleditor').cleditor({ width: '100%' });
+        CKEDITOR.replace( 'editor1', {
+            allowedContent: true
+        });
 
         var html = new HtmlHandler($("#mainForm"));
         var control_unit = new ControlUnit( [ 'validate', 'save_in_db' ], html, {{ $page->id ? $page->id : 0 }} );
 
         control_unit.requestUrls( '{{ URL::route("request-urls", "Page") }}' );
         html.addListener( control_unit );
+
+        $(".rightBtn").click(function(){
+            var elem = $(this).next();
+            if(elem.is(":visible")) elem.hide();
+            else elem.show();
+        });
+
+        $("#uploadForm").ajaxForm({
+            success: copyToClipboard
+        });
+
+        $("#submitBtn").click(function()
+        {
+            console.log("refreshed");
+            refreshCkeditor();
+        });
     });
+
+    function copyToClipboard (text) {
+        window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
+    }
+
+    function getEditor()
+    {
+        return CKEDITOR.instances.editor1;
+    }
+
+    function refreshCkeditor()
+    {
+        $('#editor1').val(getEditor().getData());
+    }
 
 </script>
 @stop

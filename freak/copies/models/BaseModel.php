@@ -1,8 +1,16 @@
 <?php
 
 use Helpers\Helper;
+use Illuminate\Database\Eloquent\Collection;
 
 abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
+
+    /**
+     * To solve PHP 5.3 no trait issue
+     *
+     * @var array
+     */
+    protected $uses = array();
 
     /**
      * Validation rules
@@ -243,5 +251,97 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
         if(! $format) return $created_at;
 
         else return date($format, strtotime($created_at));
+    }
+
+    /**
+     * @param $method
+     * @return null
+     */
+    protected function getUsedObjectFromMethod($method)
+    {
+        foreach($this->uses as $use)
+        {
+            $className = $this->getExtensionFullName($use);
+
+            if(! class_exists($className)) continue;
+
+            $object = new $className( $this );
+
+            if(method_exists($object, $method)) return $object;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param  string $method
+     * @return bool
+     */
+    protected function usesMethod($method)
+    {
+        return $this->getUsedObjectFromMethod($method) != null;
+    }
+
+    /**
+     * @param $method
+     * @param $parameters
+     * @return mixed
+     */
+    protected function useMethod($method, $parameters)
+    {
+        $object = $this->getUsedObjectFromMethod($method);
+
+        return call_user_func_array(array($object, $method), $parameters);
+    }
+
+    /**
+     * @param $class
+     * @return bool
+     */
+    public function doesUse( $class )
+    {
+        return array_search($class, $this->uses) !== false;
+    }
+
+    /**
+     * @param array $models
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function newCollection(array $models = array())
+    {
+        foreach($this->uses as $use)
+        {
+            if(method_exists($this->getExtensionFullName($use), 'newCollection'))
+
+                return call_user_func($this->getExtensionFullName($use) . '::newCollection', $models);
+        }
+
+        return new Collection($models);
+    }
+
+    /**
+     * @param string $use
+     * @return string
+     */
+    protected function getExtensionFullName( $use )
+    {
+        return '\\Extensions\\' . $use . '\\' . $use;
+    }
+
+    /**
+     * Using extensions
+     *
+     * @param string $method
+     * @param array $parameters
+     * @return mixed
+     */
+    public function __call($method, $parameters)
+    {
+        if($this->usesMethod($method))
+        {
+            return $this->useMethod($method, $parameters);
+        }
+
+        return parent::__call($method, $parameters);
     }
 }

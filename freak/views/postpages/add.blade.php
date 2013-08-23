@@ -121,14 +121,18 @@
         });
     });
 
-    function closeAddCodeDialog()
-    {
-        $("#addCodeDialog").find('.rightBtn').trigger('click');
+    function copyToClipboard (text) {
+        window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
     }
 
     function getEditor()
     {
         return CKEDITOR.instances.editor1;
+    }
+
+    function closeAddCodeDialog()
+    {
+        $("#addCodeDialog").find('.rightBtn').trigger('click');
     }
 
     function insertHTML( html ) {
@@ -145,10 +149,6 @@
         }
         else
             alert( 'You must be in WYSIWYG mode!' );
-    }
-
-    function copyToClipboard (text) {
-        window.prompt ("Copy to clipboard: Ctrl+C, Enter", text);
     }
 
     function addCode(type,set)

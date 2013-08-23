@@ -5,10 +5,12 @@ use Gallery\Version\Version;
 use Gallery\Version\VersionAlgorithm;
 use Membership\User\User;
 
-class Image extends \BaseModel implements \AcceptableInterface, \PolymorphicInterface , \OrderedInterface {
+class Image extends \BaseModel implements \PolymorphicInterface {
 	protected $connection = 'server';
-    use \Ordered;
-    use \Acceptable;
+    /**
+     * @var array
+     */
+    protected $uses = array('Ordered', 'Acceptable');
 
 	/**
 	 * The database table used by the model.

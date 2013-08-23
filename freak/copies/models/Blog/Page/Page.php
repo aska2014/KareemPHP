@@ -2,9 +2,12 @@
 
 use Blog\Post\Post;
 
-class Page extends \BaseModel implements \OrderedInterface {
+class Page extends \BaseModel {
 	protected $connection = 'server';
-    use \Ordered;
+    /**
+     * @var array
+     */
+    protected $uses = array('Ordered');
 
 	/**
 	 * The database table used by the model.

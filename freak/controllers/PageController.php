@@ -49,7 +49,7 @@ class PageController extends AppController {
 	public function create()
 	{
 		Asset::addPage('model_add');
-		Asset::addPlugins(array('wysiwyg'));
+		Asset::addPlugins(array('ckeditor', 'form'));
 
 		return View::make('pages.add')->with('page', new EmptyClass)->with('parentPages', Page::all())
 									  ->with('baseUrl', App::make('app\models\Host\HostRepository')->getBaseUrl() . '/');
@@ -101,10 +101,11 @@ class PageController extends AppController {
 		$inputs = Input::get('Page');
 
 		$page = Page::create(array(
-			
+
 			'slug'          => $inputs['slug'],
 			'title'         => $inputs['title'],
-			'description'   => $inputs['description']
+			'description'   => $inputs['description'],
+            'show_in_menu'  => $inputs['show_in_menu']
 
 		));
 
@@ -130,10 +131,11 @@ class PageController extends AppController {
 		$page = Page::find($id);
 
 		$page->update(array(
-			
+
 			'slug'          => $inputs['slug'],
 			'title'         => $inputs['title'],
-			'description'   => $inputs['description']
+			'description'   => $inputs['description'],
+            'show_in_menu'  => $inputs['show_in_menu']
 
 		));
 

@@ -14,6 +14,7 @@
                         <th>Title</th>
                         <th>State</th>
                         <th>Pages</th>
+                        <th>Post date</th>
                         <th>Tools</th>
                     </tr>
                 </thead>
@@ -30,6 +31,7 @@
                             <a href="{{ URL::action('PostPageController@edit', $page->id) }}">{{ $page->getOrder() }}</a>
                             @endforeach
                         </td>
+                        <td>{{ $post->getPostedAt('m-d, H:i:s') }}</td>
                         <td class="action-col" width="10%">
                             <span class="btn-group">
                                 <a href="{{ URL::to('model/Post/' . $post->id) }}" class="btn btn-small"><i class="icon-search"></i></a>
@@ -46,6 +48,7 @@
                         <th>Title</th>
                         <th>State</th>
                         <th>Pages</th>
+                        <th>Post date</th>
                         <th>Tools</th>
                     </tr>
                 </tfoot>
@@ -61,7 +64,7 @@
     $(window).load(function()
     {
         $('#my-table').dataTable( {
-            "aaSorting": [[ 0, "desc" ]]
+            "aaSorting": [[ 4, "desc" ]]
         } ).columnFilter();
     });
 </script>

@@ -17,6 +17,16 @@ class PostAlgorithm extends \BaseAlgorithm {
     }
 
     /**
+     * @return $this
+     */
+    public function random()
+    {
+        $this->getQuery()->orderBy(DB::raw('RAND()'));
+
+        return $this;
+    }
+
+    /**
      * @param Post $post
      * @return $this
      */

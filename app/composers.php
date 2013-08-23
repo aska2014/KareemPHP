@@ -1,6 +1,7 @@
 <?php
 use Asset\Asset;
 use Website\Page\Page;
+use Website\Page\PageAlgorithm;
 
 // Share error messages along all views
 View::share('errors', (array) Session::get('errors', array()));
@@ -34,7 +35,7 @@ View::composer('layout2.index', function($view)
 
 View::composer('layout1.header', function($view)
 {
-    $view->menuPages = Page::all();
+    $view->menuPages = PageAlgorithm::make()->inMenu()->get();
 });
 
 

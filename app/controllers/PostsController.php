@@ -73,7 +73,7 @@ class PostsController extends BaseController {
         $postPage = $this->pageAlgorithm->byPost($mainPost)->order()->paginate(1);
 
         // Get the related tutorials
-        $relatedPosts = $this->postAlgorithm->related( $mainPost )->postState()->get();
+        $relatedPosts = $this->postAlgorithm->related( $mainPost )->postState()->take(8)->get();
 
         // Get post parent and accepted comments
         $postComments = $this->commentAlgorithm->byPost($mainPost)->noParent()->accepted()->get();
@@ -113,7 +113,7 @@ class PostsController extends BaseController {
             if(! $comment->isValid()) $this->addErrors($comment);
         }
 
-        return $this->chooseResponse("The comment has been added successfully and waiting to be accepted.");
+        return $this->chooseResponse("The comment has been added successfully and waiting to be accepted by the admin.");
     }
 
     /**
@@ -123,7 +123,7 @@ class PostsController extends BaseController {
      */
     protected function getPostOrFail($id)
     {
-        $post = $this->posts->findOrFail($id);
+        $post = $this->posts->with(array('demo', 'download'))->findOrFail($id);
 
         if(! $post->isPost()) throw new GeneralException("This post hasn't been published yet.");
 

@@ -56,7 +56,7 @@ EasyRoute::controller('PagesController', array(
 
 Route::get('message-to-user.html', array('as' => 'message-to-user', function()
 {
-    $messenger = Messenger::get();
+    if(! $messenger = Messenger::get()) return Redirect::route('home');
 
-    dd($messenger->getTitle());
+    return View::make('messenger.index', compact('messenger'));
 }));
