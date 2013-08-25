@@ -18,6 +18,14 @@ class Acceptable implements AcceptableInterface {
     }
 
     /**
+     * @return bool
+     */
+    public function isAccepted()
+    {
+        return (boolean) $this->model->accepted;
+    }
+
+    /**
      * Accept current object.
      */
     public function accept()

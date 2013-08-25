@@ -45,14 +45,17 @@ EasyRoute::controller('SiteMapController', array(
 
 ));
 
-// Loop through all pages and add route for their slugs...
-foreach(Page::all() as $page)
-{
-    Route::get($page->slug, function() use ($page)
+try{
+    // Loop through all pages and add route for their slugs...
+    // This will throw exception if table didn't exist (yet) that's why I had to catch it.
+    foreach(Page::all() as $page)
     {
-        return View::make('pages.one', compact('page'));
-    });
-}
+        Route::get($page->slug, function() use ($page)
+        {
+            return View::make('pages.one', compact('page'));
+        });
+    }
+}catch(Exception $e){}
 
 Route::get('message-to-user.html', array('as' => 'message-to-user', function()
 {

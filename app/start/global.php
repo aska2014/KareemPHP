@@ -74,7 +74,6 @@ App::error(function(Exception $exception, $code)
 });
 
 
-
 App::missing(function()
 {
     $sitemap = SiteMap::instance()->toHtml();
@@ -87,7 +86,9 @@ App::missing(function()
 
 App::error(function(GeneralException $exception, $code)
 {
-    dd($exception->getMessage());
+    $messenger = new Messenger('Error!', $exception->getMessage());
+
+    return View::make('messenger.index', compact('messenger'));
 });
 
 /*

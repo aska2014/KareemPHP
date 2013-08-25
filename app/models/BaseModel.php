@@ -10,7 +10,7 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      *
      * @var array
      */
-    protected $uses = array();
+    protected $extensions = array();
 
     /**
      * Validation rules
@@ -231,14 +231,20 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      *
      * @return mixed
      */
-    public function beforeValidate(){}
+    public function beforeValidate()
+    {
+        $this->useMethodIfExists('beforeValidate');
+    }
 
     /**
      * Before save event..
      *
      * @return mixed
      */
-    public function beforeSave(){}
+    public function beforeSave()
+    {
+        $this->useMethodIfExists('beforeSave');
+    }
 
     /**
      * @param string $format
@@ -257,11 +263,11 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      * @param $method
      * @return null
      */
-    protected function getUsedObjectFromMethod($method)
+    protected function getExtensionObjectFromMethod($method)
     {
-        foreach($this->uses as $use)
+        foreach($this->extensions as $extension)
         {
-            $className = $this->getExtensionFullName($use);
+            $className = $this->getExtensionFullName($extension);
 
             if(! class_exists($className)) continue;
 
@@ -274,12 +280,25 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
     }
 
     /**
+     * @param $method
+     */
+    protected function useMethodIfExists($method)
+    {
+        if($this->usesMethod($method))
+        {
+            return $this->useMethod($method, array());
+        }
+
+        return null;
+    }
+
+    /**
      * @param  string $method
      * @return bool
      */
     protected function usesMethod($method)
     {
-        return $this->getUsedObjectFromMethod($method) != null;
+        return $this->getExtensionObjectFromMethod($method) != null;
     }
 
     /**
@@ -289,7 +308,7 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      */
     protected function useMethod($method, $parameters)
     {
-        $object = $this->getUsedObjectFromMethod($method);
+        $object = $this->getExtensionObjectFromMethod($method);
 
         return call_user_func_array(array($object, $method), $parameters);
     }
@@ -300,7 +319,7 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      */
     public function doesUse( $class )
     {
-        return array_search($class, $this->uses) !== false;
+        return array_search($class, $this->extensions) !== false;
     }
 
     /**
@@ -309,11 +328,11 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
      */
     public function newCollection(array $models = array())
     {
-        foreach($this->uses as $use)
+        foreach($this->extensions as $extension)
         {
-            if(method_exists($this->getExtensionFullName($use), 'newCollection'))
+            if(method_exists($this->getExtensionFullName($extension), 'newCollection'))
 
-                return call_user_func($this->getExtensionFullName($use) . '::newCollection', $models);
+                return call_user_func($this->getExtensionFullName($extension) . '::newCollection', $models);
         }
 
         return new Collection($models);

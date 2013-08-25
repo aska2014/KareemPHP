@@ -75,8 +75,8 @@ class Ordered implements OrderedInterface {
     public function orderExists()
     {
         return $this->getOrderGroup()
-                    ->where('order', $this->model->order)
-                    ->where('id', '!=', $this->model->id)->count() > 0;
+            ->where('order', $this->model->order)
+            ->where('id', '!=', $this->model->id)->count() > 0;
     }
 
     /**

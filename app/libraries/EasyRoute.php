@@ -12,7 +12,7 @@ class EasyRoute extends Route {
     }
 
     /**
-     * Easy way to create controllers
+     * Easy way to create controller routes with names
      *
      * @param  string $class
      * @param  array  $routes
