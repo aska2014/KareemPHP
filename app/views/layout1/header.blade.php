@@ -1,6 +1,6 @@
 <div id="header">
     <div id="bottom">
-        <a href="{{ URL::route('home') }}" id="logo_link" title="@justdevelopwebsites"><div id="logo"></div></a>
+        <a href="{{ URL::route('home') }}" id="logo_link" title="@kareemphp"><div id="logo"></div></a>
     </div>
     <div id="languages">
     </div>
