@@ -52,16 +52,17 @@ class HomeController extends BaseController {
      */
     public function archive( $year, $month = 0 )
     {
-        $posts = $this->postAlgorithm->postState()->year($year);
+        $this->postAlgorithm->postState()->year($year);
 
         $format = 'year: ' . $year;
 
         if($month)
         {
-            $posts = $posts->month($month)->paginate(self::POSTS_PER_PAGE);
+            $posts = $this->postAlgorithm->month($month)->paginate(self::POSTS_PER_PAGE);
             $format .= ' and month: ' . date('F', mktime(0, 0, 0, $month, 1, 0));
         }
-        else $posts = $posts->paginate(self::POSTS_PER_PAGE);
+
+        else $posts = $this->postAlgorithm->paginate(self::POSTS_PER_PAGE);
 
         $homeTitle = 'Tutorials in ' . $format;
 
