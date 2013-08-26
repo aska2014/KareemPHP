@@ -14,7 +14,7 @@ class User extends \BaseModel implements UserInterface, RemindableInterface {
     /**
      * @var array
      */
-    protected $uses = array('Acceptable');
+    protected $extensions = array('Acceptable');
 
     /**
      * Users types

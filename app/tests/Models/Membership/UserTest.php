@@ -7,27 +7,14 @@ use Membership\User\User;
 
 class UserTest extends \TestCase {
 
-    public function testUserImplementsAcceptableInterface()
-    {
-        $this->assertTrue(new User instanceof \AcceptableInterface);
-    }
-
     public function testValidatingUserBeforeSaving()
     {
-        $user = $this->factory->instance('Membership\User\User', array('username' => ''));
-
-        $this->assertFalse($user->save());
-
         $user = $this->factory->instance('Membership\User\User', array('email' => ''));
 
         $this->assertFalse($user->save());
 
         // Validate strong password
-        $user = $this->factory->instance('Membership\User\User', array('password' => ''));
-
-        $this->assertFalse($user->save());
-
-        $user->password = '12345678';
+        $user = $this->factory->instance('Membership\User\User', array('password' => '1234'));
 
         $this->assertFalse($user->save());
 

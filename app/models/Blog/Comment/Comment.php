@@ -7,7 +7,7 @@ class Comment extends \BaseModel implements \PolymorphicInterface {
     /**
      * @var array
      */
-    protected $uses = array('Acceptable');
+    protected $extensions = array('Acceptable');
 
 	/**
 	 * The database table used by the model.

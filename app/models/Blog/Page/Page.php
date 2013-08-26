@@ -7,7 +7,7 @@ class Page extends \BaseModel {
     /**
      * @var array
      */
-    protected $uses = array('Ordered');
+    protected $extensions = array('Ordered');
 
 	/**
 	 * The database table used by the model.

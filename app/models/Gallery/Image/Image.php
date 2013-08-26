@@ -10,7 +10,7 @@ class Image extends \BaseModel implements \PolymorphicInterface {
     /**
      * @var array
      */
-    protected $uses = array('Ordered', 'Acceptable');
+    protected $extensions = array('Ordered', 'Acceptable');
 
 	/**
 	 * The database table used by the model.

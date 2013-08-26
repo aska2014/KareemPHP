@@ -15,9 +15,4 @@ class CommentTest extends \TestCase {
 
         $this->assertFalse($comment->save());
     }
-
-    public function testCommentImplementsAcceptableInterface()
-    {
-        $this->assertTrue(new Comment() instanceof \AcceptableInterface);
-    }
 }

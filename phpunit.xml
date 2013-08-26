@@ -17,8 +17,5 @@
         <testsuite name="m">
             <directory>./app/tests/Models</directory>
         </testsuite>
-        <testsuite name="c">
-            <directory>./app/tests/Controllers</directory>
-        </testsuite>
     </testsuites>
 </phpunit>
