@@ -191,21 +191,6 @@ abstract class BaseModel extends Illuminate\Database\Eloquent\Model {
     /**
      * This will validate the model and save it.
      *
-     * @param array $attributes
-     * @return BaseModel
-     */
-    public static function create( array $attributes )
-    {
-        $model = new static($attributes);
-
-        $model->save();
-
-        return $model;
-    }
-
-    /**
-     * This will validate the model and save it.
-     *
      * @param array $options
      * @return bool
      */
